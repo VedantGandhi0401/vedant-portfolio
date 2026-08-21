@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Vedant Gandhi",
   role: "Software Engineer",
   location: "Mumbai, India",
-  email: "vedantgandhi@example.com", // update with real email
-  github: "https://github.com/vedantgandhi", // update with real URL
-  linkedin: "https://linkedin.com/in/vedantgandhi", // update with real URL
+  email: "vagandhi04@gmail.com", // update with real email
+  github: "https://github.com/VedantGandhi0401", // update with real URL
+  linkedin: "https://www.linkedin.com/in/vedant-gandhi-496308229/", // update with real URL
   tagline: "Software Engineer building scalable products and AI-powered applications.",
   description:
     "Software engineer experienced in full-stack development, cloud technologies, and Generative AI. Currently building digital products and AI-powered solutions at Axis Mutual Fund.",
@@ -40,17 +40,17 @@ export const experiences: Experience[] = [
       "Achieved response times consistently under 200 ms",
     ],
   },
-  {
-    company: "NPCI",
-    role: "Data Science Intern",
-    period: "June 2024 – August 2024",
-    bullets: [
-      "Developed fraud and AML detection models",
-      "Feature engineering with SQL across large transaction datasets",
-      "Implemented Actor-Critic reinforcement learning model",
-      "Achieved F1 score of 0.82 on fraud detection",
-    ],
-  },
+  // {
+  //   company: "NPCI",
+  //   role: "Data Science Intern",
+  //   period: "June 2024 – August 2024",
+  //   bullets: [
+  //     "Developed fraud and AML detection models",
+  //     "Feature engineering with SQL across large transaction datasets",
+  //     "Implemented Actor-Critic reinforcement learning model",
+  //     "Achieved F1 score of 0.82 on fraud detection",
+  //   ],
+  // },
   {
     company: "Techligence",
     role: "Software Development Engineer Intern",
