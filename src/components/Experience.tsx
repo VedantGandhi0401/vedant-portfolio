@@ -27,9 +27,14 @@ export default function Experience() {
                         {exp.role}
                       </p>
                     </div>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 shrink-0 sm:text-right mt-0.5">
-                      {exp.period}
-                    </span>
+                    <div className="flex flex-col items-start sm:items-end shrink-0 mt-0.5 gap-0.5">
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500">
+                        {exp.period}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500">
+                        {exp.location}
+                      </span>
+                    </div>
                   </div>
 
                   <ul className="mt-3 flex flex-col gap-1.5">

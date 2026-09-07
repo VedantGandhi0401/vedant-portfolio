@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Vedant Gandhi",
-  role: "Software Engineer",
+  role: "Software Development Engineer",
   location: "Mumbai, India",
-  email: "vagandhi04@gmail.com", // update with real email
-  github: "https://github.com/VedantGandhi0401", // update with real URL
-  linkedin: "https://www.linkedin.com/in/vedant-gandhi-496308229/", // update with real URL
+  email: "vagandhi04@gmail.com",
+  github: "https://github.com/VedantGandhi04",
+  linkedin: "https://www.linkedin.com/in/vedant-gandhi-496308229/",
   tagline: "Software Engineer building scalable products and AI-powered applications.",
   description:
     "Software engineer experienced in full-stack development, cloud technologies, and Generative AI. Currently building digital products and AI-powered solutions at Axis Mutual Fund.",
@@ -14,51 +14,33 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
+  location: string;
   bullets: string[];
 };
 
 export const experiences: Experience[] = [
   {
     company: "Axis Mutual Fund",
-    role: "Software Engineer / Management Trainee – Digital Technology",
-    period: "June 2025 – Present",
+    role: "Software Development Engineer",
+    period: "Jun 2025 – Present",
+    location: "Mumbai, India",
     bullets: [
-      "Full-stack development with Next.js and React",
-      "REST API integrations and performance optimization",
-      "Analytics instrumentation with GA4",
-      "AI-powered investment research and report generation",
-      "Cloud collaboration on AWS infrastructure",
+      "Developed end-to-end features across frontend and backend for Axis Mutual Fund's B2B and B2C investment platforms using Next.js, React.js and Spring Boot APIs.",
+      "Refactored the Add-to-Cart investment journey by decoupling it from the QuickPay flow, improving modularity and enabling independent feature development.",
+      "Optimized application performance through SSR, Critical CSS, dynamic imports, lazy loading and Akamai CDN caching, improving Lighthouse scores from 20–30 to 70–80.",
+      "Collaborated with Product Managers, QA and Business teams throughout sprint planning, implementation and production release cycles.",
     ],
   },
   {
-    company: "Wizzer Advisor",
+    company: "Wizzer Advisor Pvt. Ltd.",
     role: "Software Engineer Intern",
-    period: "June 2024 – August 2024",
+    period: "Jun 2024 – Aug 2024",
+    location: "Mumbai, India",
     bullets: [
-      "Built backend services with Fastify and Redis",
-      "Reduced database load by 30% through caching and query optimization",
-      "Achieved response times consistently under 200 ms",
-    ],
-  },
-  // {
-  //   company: "NPCI",
-  //   role: "Data Science Intern",
-  //   period: "June 2024 – August 2024",
-  //   bullets: [
-  //     "Developed fraud and AML detection models",
-  //     "Feature engineering with SQL across large transaction datasets",
-  //     "Implemented Actor-Critic reinforcement learning model",
-  //     "Achieved F1 score of 0.82 on fraud detection",
-  //   ],
-  // },
-  {
-    company: "Techligence",
-    role: "Software Development Engineer Intern",
-    period: "November 2023 – February 2024",
-    bullets: [
-      "Built interactive UI components with React and Blockly",
-      "State management with Redux",
-      "Contributed to the LogicBlocks visual programming product",
+      "Developed production features for an investment advisory platform using Vue.js, Node.js, Redis and Fastify within a small Agile engineering team.",
+      "Improved backend performance by integrating Redis caching and migrating selected APIs from Express to Fastify for faster request handling.",
+      "Implemented frontend and backend enhancements across investor-facing workflows while collaborating closely with developers during feature releases.",
+      "Contributed to production software development using Git-based workflows, debugging and iterative feature delivery.",
     ],
   },
 ];
@@ -67,6 +49,7 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
+  period?: string;
   github?: string;
   live?: string;
   featured?: boolean;
@@ -75,34 +58,35 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "AI-Powered Investment Research Report Generator",
+    title: "Investment Research Report Generator",
     description:
-      "An AI-powered RAG platform that retrieves information from private financial documents and generates structured, citation-backed investment reports.",
+      "Built an end-to-end LLM-powered pipeline that ingests annual reports, earnings call transcripts, and historical financial data to auto-generate analyst reports and answer ad-hoc research questions. Reduced analyst report-generation time from 2–3 days to under 30 minutes.",
     tags: [
+      "Next.js",
+      "FastAPI",
+      "Python",
       "AWS Bedrock",
-      "RAG",
-      "Amazon S3",
-      "S3 Vectors",
+      "S3",
       "Lambda",
       "API Gateway",
       "DynamoDB",
-      "Next.js",
-      "React",
     ],
+    period: "Jul 2025 - Dec 2025",
     featured: true,
   },
   {
-    title: "Policy Tracker",
+    title: "CBASNet – Satellite Change Detection",
     description:
-      "An AI-powered platform that monitors subscribed policies and regulatory documents, detects changes, and generates concise summaries explaining what changed.",
-    tags: ["Next.js", "Python", "Playwright", "Apify", "LLMs", "RAG", "AWS"],
-    inProgress: true,
-  },
-  {
-    title: "GoCLEAN",
-    description:
-      "A full-stack web application connecting users with verified waste management and sanitation services, streamlining booking and service tracking.",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
+      "Designed and implemented an end-to-end deep learning pipeline for urban change detection using PyTorch, OpenCV and TorchVision. Built modular preprocessing, training, evaluation and visualization pipelines enabling reproducible experimentation across the LEVIR-CD+ dataset.",
+    tags: [
+      "PyTorch",
+      "TorchVision",
+      "OpenCV",
+      "NumPy",
+      "Scikit-Learn",
+      "Matplotlib",
+    ],
+    period: "Jan 2025 – Apr 2025",
   },
 ];
 
@@ -114,30 +98,30 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
   {
     category: "Languages",
-    skills: ["Python", "Java", "JavaScript", "TypeScript", "C/C++"],
+    skills: ["Java", "C++", "Python", "JavaScript", "TypeScript"],
   },
   {
     category: "Frontend",
-    skills: ["React", "Next.js", "Vue.js"],
+    skills: ["React.js", "Next.js", "Vue.js", "HTML5", "CSS3"],
   },
   {
     category: "Backend",
-    skills: ["Node.js", "Fastify", "Express", "REST APIs"],
+    skills: ["Node.js", "Express.js", "Fastify", "REST APIs"],
   },
   {
-    category: "AI",
-    skills: ["RAG", "LLMs", "Generative AI", "Amazon Bedrock"],
+    category: "Databases",
+    skills: ["MongoDB", "PostgreSQL", "Redis"],
   },
   {
     category: "Cloud",
     skills: ["AWS", "S3", "Lambda", "API Gateway", "DynamoDB"],
   },
   {
-    category: "Databases",
-    skills: ["MongoDB", "Redis"],
+    category: "Tools",
+    skills: ["Git", "GitHub", "Docker", "Linux", "Postman"],
   },
   {
-    category: "Tools",
-    skills: ["Git", "GitHub", "Bitbucket", "Linux"],
+    category: "Concepts",
+    skills: ["Data Structures", "Algorithms", "OOP", "REST APIs", "System Design"],
   },
 ];

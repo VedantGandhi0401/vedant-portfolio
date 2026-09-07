@@ -35,9 +35,16 @@ export default function Projects() {
 
               {/* Title + links */}
               <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 leading-snug">
-                  {project.title}
-                </h3>
+                <div>
+                  <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 leading-snug">
+                    {project.title}
+                  </h3>
+                  {project.period && (
+                    <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">
+                      {project.period}
+                    </p>
+                  )}
+                </div>
                 <div className="flex items-center gap-2 shrink-0">
                   {project.github && (
                     <a
