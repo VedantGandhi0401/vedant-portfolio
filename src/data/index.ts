@@ -25,10 +25,10 @@ export const experiences: Experience[] = [
     period: "Jun 2025 – Present",
     location: "Mumbai, India",
     bullets: [
-      "Developed end-to-end features across frontend and backend for Axis Mutual Fund's B2B and B2C investment platforms using Next.js, React.js and Spring Boot APIs.",
-      "Refactored the Add-to-Cart investment journey by decoupling it from the QuickPay flow, improving modularity and enabling independent feature development.",
-      "Optimized application performance through SSR, Critical CSS, dynamic imports, lazy loading and Akamai CDN caching, improving Lighthouse scores from 20–30 to 70–80.",
-      "Collaborated with Product Managers, QA and Business teams throughout sprint planning, implementation and production release cycles.",
+      "Engineered production Java/Spring Boot APIs powering investor-facing wealth management features across SIP, Lump Sum and Goal Planning workflows on a regulated fintech platform at scale.",
+      "Improved Lighthouse scores from 20–30 to 70–80 by applying SSR, Critical CSS, Akamai CDN caching and lazy loading — diagnosing and resolving production performance bottlenecks across B2B and B2C investment platforms.",
+      "Built an enterprise RAG platform (LlamaIndex, GPT-4o/Claude, Qdrant, Redis) enabling investment analysts to securely query proprietary research documents, with metadata-based access control preventing document leakage.",
+      "Collaborated directly with Product, QA, and Business teams across sprint planning and production release cycles to deliver financial features in an Agile environment.",
     ],
   },
   {
@@ -37,10 +37,8 @@ export const experiences: Experience[] = [
     period: "Jun 2024 – Aug 2024",
     location: "Mumbai, India",
     bullets: [
-      "Developed production features for an investment advisory platform using Vue.js, Node.js, Redis and Fastify within a small Agile engineering team.",
-      "Improved backend performance by integrating Redis caching and migrating selected APIs from Express to Fastify for faster request handling.",
-      "Implemented frontend and backend enhancements across investor-facing workflows while collaborating closely with developers during feature releases.",
-      "Contributed to production software development using Git-based workflows, debugging and iterative feature delivery.",
+      "Reduced API response times by integrating Redis caching for high-frequency investment data queries and migrating hot endpoints from Express to Fastify, cutting redundant database roundtrips.",
+      "Built and optimised Node.js backend services for an investment advisory platform, delivering production enhancements within a small Agile team.",
     ],
   },
 ];
@@ -60,7 +58,7 @@ export const projects: Project[] = [
   {
     title: "Investment Research Report Generator",
     description:
-      "Built an end-to-end LLM-powered pipeline that ingests annual reports, earnings call transcripts, and historical financial data to auto-generate analyst reports and answer ad-hoc research questions. Reduced analyst report-generation time from 2–3 days to under 30 minutes.",
+      "Cut analyst report-generation time from 2–3 days to under 30 minutes by building an end-to-end LLM pipeline (Amazon Bedrock, LlamaIndex, Qdrant) that ingests annual reports, concall transcripts and financial data to auto-generate research reports and answer ad-hoc questions. Architected the full system solo on FastAPI and a serverless AWS stack (Lambda, API Gateway, S3, DynamoDB), applying Redis caching and metadata-based access control to ensure performant and secure document retrieval.",
     tags: [
       "Next.js",
       "FastAPI",
@@ -70,14 +68,17 @@ export const projects: Project[] = [
       "Lambda",
       "API Gateway",
       "DynamoDB",
+      "LlamaIndex",
+      "Qdrant",
+      "Redis",
     ],
-    period: "Jul 2025 - Dec 2025",
+    period: "Jul 2025 – Dec 2025",
     featured: true,
   },
   {
     title: "CBASNet – Satellite Change Detection",
     description:
-      "Designed and implemented an end-to-end deep learning pipeline for urban change detection using PyTorch, OpenCV and TorchVision. Built modular preprocessing, training, evaluation and visualization pipelines enabling reproducible experimentation across the LEVIR-CD+ dataset.",
+      "Achieved 98.53% classification accuracy on the LEVIR-CD+ satellite imagery dataset by designing a Siamese U-Net enhanced with CBAM attention and ASPP multi-scale pooling for urban change detection. Built modular, reproducible preprocessing, training, evaluation and visualization pipelines using PyTorch, OpenCV and NumPy, enabling reliable experimentation at scale.",
     tags: [
       "PyTorch",
       "TorchVision",
@@ -98,30 +99,26 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
   {
     category: "Languages",
-    skills: ["Java", "C++", "Python", "JavaScript", "TypeScript"],
-  },
-  {
-    category: "Frontend",
-    skills: ["React.js", "Next.js", "Vue.js", "HTML5", "CSS3"],
+    skills: ["Java", "Python", "JavaScript", "TypeScript"],
   },
   {
     category: "Backend",
-    skills: ["Node.js", "Express.js", "Fastify", "REST APIs"],
+    skills: ["Spring Boot", "Node.js", "Express.js", "Fastify", "REST APIs", "Microservices"],
   },
   {
     category: "Databases",
-    skills: ["MongoDB", "PostgreSQL", "Redis"],
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Cassandra"],
   },
   {
-    category: "Cloud",
-    skills: ["AWS", "S3", "Lambda", "API Gateway", "DynamoDB"],
+    category: "Messaging",
+    skills: ["Apache Kafka"],
   },
   {
-    category: "Tools",
-    skills: ["Git", "GitHub", "Docker", "Linux", "Postman"],
+    category: "DevOps",
+    skills: ["Linux", "Nginx", "Docker", "Jenkins", "GitHub", "CI/CD"],
   },
   {
     category: "Concepts",
-    skills: ["Data Structures", "Algorithms", "OOP", "REST APIs", "System Design"],
+    skills: ["System Design", "OOP", "Agile", "Production Support", "Distributed Systems"],
   },
 ];
