@@ -1,7 +1,10 @@
 import { Download, Eye } from "lucide-react";
+import { dataScientistProfile, type ProfileData } from "@/data";
 import { SectionHeading } from "./SectionHeading";
 
-export default function Resume() {
+type Props = { profile?: ProfileData };
+
+export default function Resume({ profile = dataScientistProfile }: Props) {
   return (
     <section id="resume" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
@@ -17,7 +20,7 @@ export default function Resume() {
 
           <div className="flex flex-wrap gap-3">
             <a
-              href="/resumeV8.pdf"
+              href={profile.resumePdf}
               download
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:bg-zinc-700 dark:hover:bg-zinc-300 transition-colors"
             >
@@ -26,7 +29,7 @@ export default function Resume() {
             </a>
 
             <a
-              href="/resumeV8.pdf"
+              href={profile.resumePdf}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-sm font-medium hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all"

@@ -1,14 +1,16 @@
-import { skillGroups } from "@/data";
+import { dataScientistProfile, type ProfileData } from "@/data";
 import { SectionHeading } from "./SectionHeading";
 
-export default function Skills() {
+type Props = { profile?: ProfileData };
+
+export default function Skills({ profile = dataScientistProfile }: Props) {
   return (
     <section id="skills" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeading label="Skills" />
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillGroups.map((group) => (
+          {profile.skillGroups.map((group) => (
             <div key={group.category}>
               <p className="text-xs font-medium tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-3">
                 {group.category}

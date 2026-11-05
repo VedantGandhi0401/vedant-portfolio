@@ -1,7 +1,9 @@
-import { experiences } from "@/data";
+import { dataScientistProfile, type ProfileData } from "@/data";
 import { SectionHeading } from "./SectionHeading";
 
-export default function Experience() {
+type Props = { profile?: ProfileData };
+
+export default function Experience({ profile = dataScientistProfile }: Props) {
   return (
     <section id="experience" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
@@ -12,7 +14,7 @@ export default function Experience() {
           <div className="absolute left-0 top-2 bottom-2 w-px bg-zinc-100 dark:bg-zinc-800 hidden sm:block" />
 
           <div className="flex flex-col gap-10">
-            {experiences.map((exp, i) => (
+            {profile.experiences.map((exp, i) => (
               <div key={i} className="sm:pl-8 relative group">
                 {/* Timeline dot */}
                 <div className="absolute left-[-4px] top-1.5 w-2 h-2 rounded-full bg-zinc-300 dark:bg-zinc-700 group-hover:bg-zinc-900 dark:group-hover:bg-zinc-100 transition-colors hidden sm:block" />

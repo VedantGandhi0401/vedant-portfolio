@@ -2,9 +2,11 @@
 
 import { FileText, ArrowDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
-import { siteConfig } from "@/data";
+import { siteConfig, dataScientistProfile, type ProfileData } from "@/data";
 
-export default function Hero() {
+type Props = { profile?: ProfileData };
+
+export default function Hero({ profile = dataScientistProfile }: Props) {
   return (
     <section
       id="hero"
@@ -23,12 +25,12 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="text-xl sm:text-2xl font-medium text-zinc-500 dark:text-zinc-400 mb-6 max-w-2xl">
-          {siteConfig.tagline}
+          {profile.tagline}
         </p>
 
         {/* Description */}
         <p className="text-base text-zinc-500 dark:text-zinc-400 max-w-xl leading-relaxed mb-10">
-          {siteConfig.description}
+          {profile.description}
         </p>
 
         {/* CTA buttons */}

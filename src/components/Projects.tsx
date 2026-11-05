@@ -1,16 +1,18 @@
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "./icons";
-import { projects } from "@/data";
+import { dataScientistProfile, type ProfileData } from "@/data";
 import { SectionHeading } from "./SectionHeading";
 
-export default function Projects() {
+type Props = { profile?: ProfileData };
+
+export default function Projects({ profile = dataScientistProfile }: Props) {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeading label="Projects" />
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
-          {projects.map((project, i) => (
+          {profile.projects.map((project, i) => (
             <div
               key={i}
               className={`group relative flex flex-col p-6 rounded-xl border bg-white dark:bg-zinc-950 transition-all hover:shadow-sm ${
