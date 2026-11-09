@@ -1,0 +1,307 @@
+% ============================================================
+% data/skills.tex
+% Defines all role-specific skill set commands used in
+% sections/skills.tex.
+%
+% HOW IT WORKS:
+% Each \newcommand defines one complete skill set.
+% Inside each command, \SkillCategory{label}{skills} renders
+% one row: bold category label followed by comma-separated skills.
+%
+% To update skills for a role — edit the relevant command below.
+% To add a new role:
+%   1. Add \newcommand{\XxxSkills}{...} here
+%   2. Add \IfXxx{\XxxSkills} in sections/skills.tex
+%   3. Add \IfXxx{} in settings.tex
+% ============================================================
+
+
+% ============================================================
+% SDE — Software Development Engineer
+% Broad skill set covering frontend, backend, databases,
+% tools, and CS fundamentals. Used for general SDE roles.
+% ============================================================
+\newcommand{\SDESkills}{
+  \SkillCategory{Languages}  {Java, C++, Python, JavaScript, TypeScript}
+  \SkillCategory{Frontend}   {React.js, Next.js, HTML5, CSS3}
+  \SkillCategory{Backend}    {Node.js, Express.js, Fastify, Spring Boot}
+  \SkillCategory{Databases}  {MongoDB, PostgreSQL, Redis}
+  \SkillCategory{Cloud/ML}   {AWS (Bedrock, S3, Lambda, API Gateway, DynamoDB), PyTorch, TorchVision, OpenCV}
+  \SkillCategory{Tools}      {Git, GitHub, Docker, Linux, Postman}
+  \SkillCategory{Concepts}   {Data Structures, Algorithms, OOP, REST APIs, System Design}
+}
+
+
+% ============================================================
+% NPCI — Lead Application Development
+% Tailored for NPCI's Java/Spring Boot backend engineering
+% role in digital payments. Emphasises Java, Spring Boot,
+% Redis, PostgreSQL, Kafka, CI/CD, Linux, and AI/LLM work.
+% ============================================================
+\newcommand{\NPCISkills}{
+  \SkillCategory{Languages}  {Java, Python, JavaScript, TypeScript}
+  \SkillCategory{Backend}    {Spring Boot, Node.js, Express.js, Fastify, REST APIs, Microservices}
+  \SkillCategory{Databases}  {PostgreSQL, MongoDB, Redis, Cassandra}
+  \SkillCategory{Messaging}  {Apache Kafka}
+  \SkillCategory{DevOps}     {Linux, Nginx, Docker, Jenkins, GitHub, CI/CD}
+  \SkillCategory{AI/LLM}     {Amazon Bedrock, LlamaIndex, RAG, GPT-4o, Qdrant}
+  \SkillCategory{Concepts}   {System Design, OOP, Agile, Production Support, Distributed Systems}
+}
+
+
+% ============================================================
+% Backend
+% Focused on server-side technologies, databases, caching,
+% and scalability concepts. Drops frontend skills entirely.
+% ============================================================
+\newcommand{\BackendSkills}{
+  \SkillCategory{Languages}  {Java, C++, Python, JavaScript, TypeScript}
+  \SkillCategory{Backend}    {Node.js, Express.js, Fastify}
+  \SkillCategory{Databases}  {MongoDB, PostgreSQL, Redis}
+  \SkillCategory{Cloud}      {Docker, Linux}
+  \SkillCategory{Concepts}   {REST APIs, Authentication, Caching, Scalability, Microservices}
+}
+
+
+% ============================================================
+% Frontend
+% Focused on UI frameworks, state management, and styling.
+% Drops backend and database skills entirely.
+% ============================================================
+\newcommand{\FrontendSkills}{
+  \SkillCategory{Languages}        {JavaScript, TypeScript, HTML5, CSS3}
+  \SkillCategory{Frameworks}       {React.js, Vue.js}
+  \SkillCategory{State Management} {Redux}
+  \SkillCategory{UI}               {Responsive Design, Component-Based Development}
+  \SkillCategory{Tools}            {Git, Figma, Postman}
+}
+
+
+% ============================================================
+% Full Stack
+% Covers both frontend and backend but keeps each category
+% concise. Signals breadth over depth.
+% ============================================================
+\newcommand{\FullStackSkills}{
+  \SkillCategory{Languages} {JavaScript, TypeScript, Java, Python}
+  \SkillCategory{Frontend}  {React.js, HTML5, CSS3}
+  \SkillCategory{Backend}   {Node.js, Express.js, Fastify}
+  \SkillCategory{Databases} {MongoDB, PostgreSQL, Redis}
+  \SkillCategory{Tools}     {Git, Docker, Linux}
+}
+
+
+% ============================================================
+% ML — Machine Learning
+% Focused on Python ecosystem, CV libraries, and ML concepts.
+% Drops web and database skills entirely.
+% ============================================================
+\newcommand{\MLSkills}{
+  \SkillCategory{Languages}       {Python, C++, Java}
+  \SkillCategory{Libraries}       {OpenCV, NumPy, Pandas, Matplotlib}
+  \SkillCategory{Machine Learning}{PCANet, Deep Learning, Computer Vision}
+  \SkillCategory{Tools}           {Jupyter Notebook, Git}
+  \SkillCategory{Concepts}        {Image Processing, Feature Extraction, Classification}
+}
+
+
+% ============================================================
+% Data — Data Engineering / Analytics
+% Focused on big data tools, SQL, ETL pipelines, and
+% analytics libraries. Drops web skills entirely.
+% ============================================================
+\newcommand{\DataSkills}{
+  \SkillCategory{Languages} {Python, SQL, Java}
+  \SkillCategory{Big Data}  {Apache Spark, Hadoop}
+  \SkillCategory{Databases} {MongoDB, PostgreSQL}
+  \SkillCategory{Libraries} {Pandas, NumPy, Matplotlib}
+  \SkillCategory{Concepts}  {ETL, Data Pipelines, Distributed Systems, Data Visualization}
+}
+
+
+% ============================================================
+% DevOps
+% Focused on infrastructure, containerization, CI/CD,
+% and version control. Keeps backend minimal as context.
+% ============================================================
+\newcommand{\DevOpsSkills}{
+  \SkillCategory{Containers}       {Docker}
+  \SkillCategory{Operating Systems}{Linux}
+  \SkillCategory{Version Control}  {Git, GitHub, Bitbucket}
+  \SkillCategory{Backend}          {Node.js, Fastify}
+  \SkillCategory{Concepts}         {CI/CD, Deployment, Monitoring, Infrastructure as Code}
+}
+
+
+% ============================================================
+% Quant — Quantitative / Algorithmic roles
+% Focused on C++, mathematics, and algorithmic problem solving.
+% Drops web and data tools entirely.
+% ============================================================
+\newcommand{\QuantSkills}{
+  \SkillCategory{Languages}   {C++, Python, Java}
+  \SkillCategory{Mathematics} {Probability, Statistics, Linear Algebra, Calculus}
+  \SkillCategory{Programming} {Algorithms, Data Structures, Competitive Programming}
+  \SkillCategory{Tools}       {Git, Linux}
+  \SkillCategory{Concepts}    {Optimization, Numerical Computing, Algorithmic Trading}
+}
+
+
+% ============================================================
+% Finance — Investment / Financial Analysis roles
+% Focused on financial modeling, analytics tools, and
+% domain knowledge. Keeps programming minimal.
+% ============================================================
+\newcommand{\FinanceSkills}{
+  \SkillCategory{Programming}{Python, SQL}
+  \SkillCategory{Finance}    {Financial Modeling, Valuation, Portfolio Analysis, CAGR}
+  \SkillCategory{Analytics}  {Excel, Power BI, Matplotlib}
+  \SkillCategory{Concepts}   {Statistics, Forecasting, Risk Analysis, Data Visualization}
+}
+
+
+% ============================================================
+% Consulting — Management / Business Consulting roles
+% Focused on analytical tools, business skills, and
+% communication. Keeps programming minimal.
+% ============================================================
+\newcommand{\ConsultingSkills}{
+  \SkillCategory{Programming}{Python, SQL}
+  \SkillCategory{Analytics}  {Excel, Power BI}
+  \SkillCategory{Business}   {Problem Solving, Stakeholder Management, Presentations}
+  \SkillCategory{Concepts}   {Data Analysis, Business Communication, Process Improvement}
+}
+
+
+% ============================================================
+% SRE — Site Reliability Engineer
+% Focused on reliability, observability, incident response,
+% infrastructure automation, and distributed systems.
+% ============================================================
+\newcommand{\SRESkills}{
+  \SkillCategory{Languages}       {Python, Bash}
+  \SkillCategory{Infrastructure}  {Docker, Kubernetes, Linux, Nginx}
+  \SkillCategory{Observability}   {Grafana}
+  \SkillCategory{Cloud}           {AWS (Bedrock, S3, Lambda, API Gateway, DynamoDB, IAM), GCP}
+  \SkillCategory{CI/CD}           {GitHub Actions, Jenkins}
+  \SkillCategory{Version Control} {Git, GitHub, Bitbucket}
+}
+
+
+% ============================================================
+% MLOps — ML Operations Engineer
+% Focused on ML pipelines, model deployment, monitoring,
+% and infrastructure for machine learning systems.
+% ============================================================
+\newcommand{\MLOpsSkills}{
+  \SkillCategory{Languages}       {Python, SQL}
+  \SkillCategory{ML Frameworks}   {TensorFlow, PyTorch, scikit-learn}
+  \SkillCategory{Experiment Tracking} {Weights \& Biases}
+  \SkillCategory{Infrastructure}  {Docker, Kubernetes, Linux}
+  \SkillCategory{Cloud}           {AWS SageMaker}
+  \SkillCategory{Concepts}        {Model Training, Model Deployment, Experiment Tracking}
+}
+
+
+% ============================================================
+% Cloud — Cloud Engineer
+% Focused on cloud infrastructure, IaC, networking,
+% and managed services across major providers.
+% ============================================================
+\newcommand{\CloudSkills}{
+  \SkillCategory{Languages}      {Python, Bash}
+  \SkillCategory{Cloud}          {AWS (Bedrock, S3, Lambda, API Gateway, DynamoDB, IAM), GCP, Azure}
+  \SkillCategory{Containers}     {Docker, Kubernetes}
+  \SkillCategory{Concepts}       {Serverless Architecture, IAM, Cloud Service Integration}
+}
+
+
+% ============================================================
+% Security — Security Engineer
+% Focused on application security, threat modeling,
+% penetration testing, and secure system design.
+% ============================================================
+\newcommand{\SecuritySkills}{
+  \SkillCategory{Languages}      {Python, Bash}
+  \SkillCategory{Security Tools} {Nmap, Wireshark}
+  \SkillCategory{Auth}           {OAuth2, JWT, TLS/SSL}
+  \SkillCategory{Infrastructure} {Linux, Docker}
+  \SkillCategory{Concepts}       {Secure Authentication Flows, API Security, TLS/SSL Configuration}
+}
+
+
+% ============================================================
+% Applied — Applied Scientist / Applied ML
+% Focused on applying ML research to production systems,
+% experimentation, and data-driven product decisions.
+% ============================================================
+\newcommand{\AppliedSkills}{
+  \SkillCategory{Languages}        {Python, C++, SQL}
+  \SkillCategory{ML Frameworks}    {PyTorch, TensorFlow, scikit-learn}
+  \SkillCategory{Libraries}        {NumPy, Pandas, OpenCV, Matplotlib}
+  \SkillCategory{ML Concepts}      {Deep Learning, Computer Vision, NLP, Feature Engineering}
+  \SkillCategory{Experimentation}  {A/B Testing, Statistical Significance, Hypothesis Testing}
+  \SkillCategory{Tools}            {Jupyter Notebook, MLflow, Git}
+}
+
+
+% ============================================================
+% QuantResearch — Quantitative Researcher
+% Focused on mathematical modeling, statistical research,
+% signal generation, and algorithmic strategy development.
+% ============================================================
+\newcommand{\QuantResearchSkills}{
+  \SkillCategory{Languages}    {C++, Python, R}
+  \SkillCategory{Mathematics}  {Probability, Statistics, Stochastic Calculus, Linear Algebra, Optimization}
+  \SkillCategory{Finance}      {Alpha Research, Factor Models, Portfolio Theory, Risk Management}
+  \SkillCategory{Libraries}    {NumPy, Pandas, SciPy, Matplotlib}
+  \SkillCategory{Programming}  {Algorithms, Data Structures, Competitive Programming}
+  \SkillCategory{Concepts}     {Time Series Analysis, Backtesting, Statistical Arbitrage, Signal Research}
+}
+
+
+% ============================================================
+% QuantTrader — Quantitative Trader
+% Focused on execution, low-latency systems, market
+% microstructure, and trading strategy implementation.
+% ============================================================
+\newcommand{\QuantTraderSkills}{
+  \SkillCategory{Languages}    {C++, Python}
+  \SkillCategory{Mathematics}  {Probability, Statistics, Game Theory, Optimization}
+  \SkillCategory{Trading}      {Market Microstructure, Order Book Dynamics, Execution Algorithms}
+  \SkillCategory{Programming}  {Low-Latency Systems, Algorithms, Data Structures}
+  \SkillCategory{Finance}      {Options Pricing, Greeks, Risk Management, P\&L Attribution}
+  \SkillCategory{Tools}        {Git, Linux, FIX Protocol}
+}
+
+
+% ============================================================
+% Analytics — Analytics Engineer / Data Analyst
+% Focused on SQL, data modeling, BI tools, and
+% translating data into actionable business insights.
+% ============================================================
+\newcommand{\AnalyticsSkills}{
+  \SkillCategory{Languages}  {SQL, Python, R}
+  \SkillCategory{BI Tools}   {Tableau, Power BI, Looker, Metabase}
+  \SkillCategory{Libraries}  {Pandas, NumPy, Matplotlib, Seaborn}
+  \SkillCategory{Data Stack} {dbt, Airflow, Snowflake, BigQuery}
+  \SkillCategory{Databases}  {PostgreSQL, MongoDB}
+  \SkillCategory{Concepts}   {Data Modeling, ETL, A/B Testing, Funnel Analysis, Dashboarding}
+}
+
+
+% ============================================================
+% PyDS — Python Data Scientist / AI Engineer
+% Tailored for ML/DL-heavy roles (fraud detection, LLMs,
+% Graph AI). Emphasises Python ecosystem, deep learning
+% frameworks, GenAI stack, and model deployment tools.
+% ============================================================
+\newcommand{\PyDSSkills}{
+  \SkillCategory{Languages}        {Python, SQL, C++}
+  \SkillCategory{ML / DL}          {PyTorch, TensorFlow, scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Matplotlib}
+  \SkillCategory{Generative AI}    {LLMs (OpenAI, open-source), LlamaIndex, RAG pipelines, Prompt Engineering, Qdrant}
+  \SkillCategory{Graph AI}         {PyTorch Geometric, GNN, GCN, GAT}
+  \SkillCategory{Data Engineering} {Apache Spark, PostgreSQL, MongoDB, Redis}
+  \SkillCategory{MLOps / Infra}    {Docker, AWS (Bedrock, S3, Lambda, DynamoDB), Git, Linux}
+  \SkillCategory{Concepts}         {Feature Engineering, Imbalanced Learning, Model Evaluation, Distributed Systems}
+}

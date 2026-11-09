@@ -1,0 +1,147 @@
+% ============================================================
+% sections/skills.tex
+% Renders the technical skills section.
+%
+% HOW IT WORKS:
+% 1. \input{} loads all skill set command definitions from
+%    data/skills.tex into memory.
+% 2. \IfRole{} renders only the matching skill set.
+%
+% To update skills for a role, edit data/skills.tex directly.
+% To add a new role, add a \newcommand{\XxxSkills} block in
+% data/skills.tex and a matching \IfXxx{} guard below.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% LOAD SKILL DEFINITIONS
+% Loads all \XxxSkills commands into memory.
+% Does NOT render anything on the page yet.
+% All skill content lives in data/skills.tex.
+% ------------------------------------------------------------
+\input{data/skills}
+
+
+% ------------------------------------------------------------
+% \ResumeSection{} — defined in settings.tex
+% Renders the bold uppercase "TECHNICAL SKILLS" heading
+% with a full-width horizontal rule underneath.
+% ------------------------------------------------------------
+\ResumeSection{Technical Skills}
+
+
+% ============================================================
+% ROLE-SPECIFIC SKILL SETS
+% Only the block matching \Role in config.tex will render.
+% Each \IfRole{} calls one command defined in data/skills.tex.
+% That command expands into multiple \SkillCategory{}{} lines.
+% ============================================================
+
+% Each skill command expands to \SkillCategory{}{} calls which
+% use \item, so they must be wrapped in a list environment.
+\begin{ResumeItemize}
+
+% ------------------------------------------------------------
+% SDE — general software engineering skill set
+% ------------------------------------------------------------
+\IfSDE{\SDESkills}
+
+% ------------------------------------------------------------
+% Backend — server-side, APIs, databases, caching
+% ------------------------------------------------------------
+\IfBackend{\BackendSkills}
+
+% ------------------------------------------------------------
+% Frontend — UI frameworks, state management, styling
+% ------------------------------------------------------------
+\IfFrontend{\FrontendSkills}
+
+% ------------------------------------------------------------
+% Full Stack — frontend + backend combined
+% ------------------------------------------------------------
+\IfFullStack{\FullStackSkills}
+
+% ------------------------------------------------------------
+% ML — Python, libraries, model training, computer vision
+% ------------------------------------------------------------
+\IfML{\MLSkills}
+
+% ------------------------------------------------------------
+% Data — SQL, big data tools, ETL, analytics libraries
+% ------------------------------------------------------------
+\IfData{\DataSkills}
+
+% ------------------------------------------------------------
+% DevOps — Docker, Linux, CI/CD, version control
+% ------------------------------------------------------------
+\IfDevOps{\DevOpsSkills}
+
+% ------------------------------------------------------------
+% Quant — C++, mathematics, algorithms, numerical computing
+% ------------------------------------------------------------
+\IfQuant{\QuantSkills}
+
+% ------------------------------------------------------------
+% Finance — Python, Excel, financial modeling, analytics
+% ------------------------------------------------------------
+\IfFinance{\FinanceSkills}
+
+% ------------------------------------------------------------
+% Consulting — Python, Excel, business analytics, communication
+% ------------------------------------------------------------
+\IfConsulting{\ConsultingSkills}
+
+% ------------------------------------------------------------
+% SRE — reliability, observability, infrastructure, on-call
+% ------------------------------------------------------------
+\IfSRE{\SRESkills}
+
+% ------------------------------------------------------------
+% MLOps — ML pipelines, model deployment, feature stores
+% ------------------------------------------------------------
+\IfMLOps{\MLOpsSkills}
+
+% ------------------------------------------------------------
+% Cloud — AWS/GCP/Azure, IaC, networking, serverless
+% ------------------------------------------------------------
+\IfCloud{\CloudSkills}
+
+% ------------------------------------------------------------
+% Security — OWASP, pen testing, cryptography, auth
+% ------------------------------------------------------------
+\IfSecurity{\SecuritySkills}
+
+% ------------------------------------------------------------
+% Applied — applied ML, experimentation, model evaluation
+% ------------------------------------------------------------
+\IfApplied{\AppliedSkills}
+
+% ------------------------------------------------------------
+% QuantResearch — C++, stochastic calculus, alpha research
+% ------------------------------------------------------------
+\IfQuantResearch{\QuantResearchSkills}
+
+% ------------------------------------------------------------
+% QuantTrader — low-latency, market microstructure, options
+% ------------------------------------------------------------
+\IfQuantTrader{\QuantTraderSkills}
+
+% ------------------------------------------------------------
+% Analytics — SQL, BI tools, dbt, data modeling
+% ------------------------------------------------------------
+\IfAnalytics{\AnalyticsSkills}
+
+% ------------------------------------------------------------
+% NPCI — Lead Application Development (Java/Spring Boot,
+% backend systems, fintech, Redis, Kafka, AI/LLM)
+% ------------------------------------------------------------
+\IfNPCI{\NPCISkills}
+
+% ------------------------------------------------------------
+% PyDS — Python Data Scientist / AI Engineer
+% (ML/DL, Graph AI, LLMs, RAG, fraud detection,
+%  PyTorch, scikit-learn, XGBoost, GNN)
+% ------------------------------------------------------------
+\IfPyDS{\PyDSSkills}
+
+\end{ResumeItemize}

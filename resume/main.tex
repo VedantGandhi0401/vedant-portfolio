@@ -1,0 +1,103 @@
+% ============================================================
+% main.tex
+% Entry point of the resume. LaTeX starts compiling from here.
+% To target a different role, only change \Role in config.tex.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% DOCUMENT CLASS
+% "article" is a standard LaTeX document type (no chapters).
+% "11pt" sets the base font size to 11 points.
+% "letterpaper" sets page size to US Letter (8.5 x 11 in).
+% ------------------------------------------------------------
+\documentclass[10pt,letterpaper]{article}
+
+
+% ------------------------------------------------------------
+% LOAD SETTINGS AND CONFIG
+% \input{} pastes the contents of another file inline here.
+% settings.tex loads all packages and defines reusable commands.
+% config.tex sets \Role, \Company, and optional section flags.
+% settings must be loaded before config.
+% ------------------------------------------------------------
+\input{settings}
+\input{config}
+
+
+% ------------------------------------------------------------
+% DOCUMENT START
+% Everything between \begin{document} and \end{document}
+% is the actual visible content rendered in the PDF.
+% ------------------------------------------------------------
+\begin{document}
+
+
+% ------------------------------------------------------------
+% HEADER
+% Renders your name and contact info at the top of the page.
+% ------------------------------------------------------------
+\input{sections/header}
+
+
+% ------------------------------------------------------------
+% EDUCATION
+% Renders your degree, institution, and relevant coursework.
+% Coursework shown is role-specific (controlled by \Role).
+% CGPA visibility is controlled by \ifShowCGPA in config.tex.
+% ------------------------------------------------------------
+\input{sections/education}
+
+
+% ------------------------------------------------------------
+% EXPERIENCE
+% Renders internship and work experience entries.
+% Each entry shows role-specific bullet points.
+% ------------------------------------------------------------
+\input{sections/experience}
+
+
+% ------------------------------------------------------------
+% PROJECTS
+% Renders project entries with role-specific bullet points.
+% ------------------------------------------------------------
+\input{sections/projects}
+
+
+% ------------------------------------------------------------
+% SKILLS
+% Renders technical skills grouped by category.
+% The skill set shown depends on \Role in config.tex.
+% ------------------------------------------------------------
+\input{sections/skills}
+
+
+% ------------------------------------------------------------
+% ACHIEVEMENTS & LEADERSHIP (merged)
+% Renders achievements, certifications, awards, and leadership
+% entries under a single heading. Which achievements appear
+% depends on \Role in config.tex. Leadership bullets are always
+% included (role-agnostic). Entire section toggled by
+% \ifShowAchievements in config.tex.
+% (The old \ifShowLeadership flag is now a no-op; the two
+% sections are merged — see sections/achievements.tex.)
+% ------------------------------------------------------------
+\ifShowAchievements
+\input{sections/achievements}
+\fi
+
+
+% ------------------------------------------------------------
+% CERTIFICATIONS (Optional)
+% Create sections/certifications.tex first, then uncomment.
+% Toggled by \ifShowCertifications in config.tex.
+% ------------------------------------------------------------
+% \ifShowCertifications
+% \input{sections/certifications}
+% \fi
+
+
+% ------------------------------------------------------------
+% DOCUMENT END
+% ------------------------------------------------------------
+\end{document}

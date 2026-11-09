@@ -1,0 +1,220 @@
+% ============================================================
+% sections/projects.tex
+% Renders project entries, capped at \MaxProjects (config.tex).
+%
+% HOW IT WORKS:
+% 1. \input{} at the top loads project bullet definitions.
+% 2. \ProjectSlot{prefix}{block} renders #2 only if a bullet
+%    variant named \<prefix><Role> exists AND fewer than
+%    \MaxProjects entries have rendered so far for this role.
+% 3. Blocks are ordered by PRIORITY -- the project listed
+%    first gets first claim on a slot. Reorder the blocks
+%    below to change priority; \MaxProjects in config.tex
+%    controls how many slots exist.
+%
+% CURRENT PRIORITY ORDER:
+%   1. CBASNet
+%   2. Investment Research Report Generator
+%   3. Crop Change Detection
+%   4. VJTI Connect
+%   5. Community Waste Management Platform
+%   6. LogicBlocks
+%   7. Policy Tracker (In Progress)
+%
+% To add a new project:
+%   1. Create data/projects/yourproject.tex, defining bullet
+%      variants named \YourProjectBullet<Role> (or whatever
+%      prefix you choose) for each role it's relevant to.
+%   2. \input{} it below.
+%   3. Add a \ProjectSlot{prefix}{ \ProjectEntry{...} ... }
+%      block wherever it should rank in priority order.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% LOAD BULLET LIBRARIES
+%
+% Note: data/projects/logicblocks.tex only defines
+% \ProjectLogicBlocksHeader. The actual bullet commands
+% (\LogicBlocksSDE, \LogicBlocksBackend, etc.) are already
+% loaded by sections/experience.tex via
+% data/experience/internships/logicblocks.tex.
+% ------------------------------------------------------------
+\input{data/projects/cbasnet}%                    loads \CBASSDE, \CBASML, etc.
+\input{data/projects/investment_report_generator}% loads \InvestmentReportGenSDE, etc.
+\input{data/projects/crop_detection}%              loads \CropDetectionBulletML, etc.
+\input{data/projects/vjti_connect}%                loads \VJTIConnectBulletSDE, etc.
+\input{data/projects/waste_management}%            loads \WasteMgmtSDE, etc.
+\input{data/projects/logicblocks}%                 loads \ProjectLogicBlocksHeader only
+\input{data/projects/policy_tracker}%              loads \PolicyTrackerSDE, etc.
+
+
+\ResumeSection{Projects}
+\setcounter{projectsshown}{0}%   reset the per-resume slot counter
+
+
+% ============================================================
+% 1. CBASNET
+% CBAM + ASPP enhanced Siamese U-Net for satellite change
+% detection. Relevant roles: SDE, Backend, ML, Applied, Data,
+% Analytics, Consulting.
+% ============================================================
+
+\ProjectSlot{CBAS}{
+  \ProjectEntry
+    {CBASNet -- Satellite Change Detection}%
+    {Jan 2025 -- Apr 2025}%
+    {PyTorch, TorchVision, OpenCV, NumPy, Scikit-Learn, Matplotlib}%
+  \begin{ResumeItemize}
+    \RoleContent{CBAS}
+  \end{ResumeItemize}
+  \vspace{2pt}%
+}
+
+
+% ============================================================
+% 2. INVESTMENT RESEARCH REPORT GENERATOR
+% LLM-powered analyst report generation (2--3 days -> <30 min).
+% Relevant roles: SDE, Backend, FullStack, ML, Applied, Data,
+% Analytics, Finance, Quant, QuantResearch, QuantTrader,
+% Consulting.
+% ============================================================
+
+\ProjectSlot{InvestmentReportGen}{
+  \ProjectEntry
+    {\InvestmentReportGenName}%
+    {\InvestmentReportGenDuration}%
+    {\InvestmentReportGenStack}%
+  \begin{ResumeItemize}
+    \RoleContent{InvestmentReportGen}
+  \end{ResumeItemize}
+  \vspace{2pt}%
+}
+
+% ============================================================
+% 3. CROP CHANGE DETECTION
+% Relevant roles: ML, Data, Consulting, Applied, MLOps,
+% Analytics.
+% ============================================================
+
+\ProjectSlot{CropDetectionBullet}{
+  \ProjectEntry
+    {Crop Change Detection using Satellite Imagery}%
+    {2025 -- Present}%
+    {Python, OpenCV, NumPy, PCANet, Deep Learning}%
+  \begin{ResumeItemize}
+    \RoleContent{CropDetectionBullet}
+  \end{ResumeItemize}
+  \vspace{2pt}%
+}
+
+
+% ============================================================
+% 4. VJTI CONNECT
+% Relevant roles: SDE, Backend, Frontend, FullStack, SRE,
+% Security, Analytics, Cloud.
+% ============================================================
+
+\ProjectSlot{VJTIConnectBullet}{
+  \ProjectEntry
+    {VJTI Connect -- Campus Social Network}%
+    {2025 -- Present}%
+    {React, TypeScript, Node.js, Express.js, MongoDB, JWT, Socket.IO}%
+  \begin{ResumeItemize}
+    \RoleContent{VJTIConnectBullet}
+  \end{ResumeItemize}
+  \vspace{2pt}%
+}
+
+
+% ============================================================
+% 5. COMMUNITY WASTE MANAGEMENT PLATFORM
+% Not yet deployed. Relevant roles: SDE, Backend, Frontend,
+% FullStack.
+% ============================================================
+
+\ProjectSlot{WasteMgmt}{
+  \ProjectEntry
+    {\WasteMgmtName}%
+    {\WasteMgmtDuration}%
+    {\WasteMgmtStack}%
+  \begin{ResumeItemize}
+    \RoleContent{WasteMgmt}
+  \end{ResumeItemize}
+  \vspace{2pt}%
+}
+
+
+% ============================================================
+% 6. LOGICBLOCKS
+% Relevant roles: SDE, Backend, Frontend, FullStack, ML,
+% MLOps, SRE, Cloud, Security, Applied, Analytics.
+%
+% \ProjectLogicBlocksHeader is defined in
+% data/projects/logicblocks.tex. It calls \ProjectEntry
+% internally with the name, duration, and tech stack filled in.
+% ============================================================
+
+\ProjectSlot{LogicBlocks}{
+  \ProjectLogicBlocksHeader
+  \begin{ResumeItemize}
+    \RoleContent{LogicBlocks}
+  \end{ResumeItemize}
+  \vspace{2pt}%
+}
+
+
+% ============================================================
+% 7. POLICY TRACKER (In Progress)
+% Lowest priority -- unfinished project, shown only if a slot
+% remains after the above. Relevant roles: SDE, Backend,
+% DevOps, SRE, Data, Consulting, Analytics.
+% ============================================================
+
+\ProjectSlot{PolicyTracker}{
+  \ProjectEntry
+    {\PolicyTrackerName}%
+    {\PolicyTrackerDuration}%
+    {\PolicyTrackerStack}%
+  \begin{ResumeItemize}
+    \RoleContent{PolicyTracker}
+  \end{ResumeItemize}
+  \vspace{2pt}%
+}
+
+
+% ============================================================
+% PARKED -- waiting on details before wiring in:
+%   - Dr on Click (team hackathon project, MERN)
+%   - Shopping 3D UI (solo, 3D product viewer e-commerce)
+% Ideas not yet built (not resume material):
+%   - Live-changing website (auto UI -> code)
+%   - Startup investment platform
+%   - Combined Jira/Testiny/Slack tool
+% ============================================================
+
+% ============================================================
+% OPTIONAL FUTURE PROJECTS (pre-existing stubs)
+% ============================================================
+
+% \ProjectSlot{TradingEngineBullet}{
+%   \ProjectEntry
+%     {Trading Engine}%
+%     {2025}%
+%     {C++, Python, Redis, Kafka}%
+%   \begin{ResumeItemize}
+%     \RoleContent{TradingEngineBullet}
+%   \end{ResumeItemize}
+%   \vspace{4pt}%
+% }
+
+% \ProjectSlot{PortfolioOptimizerBullet}{
+%   \ProjectEntry
+%     {Portfolio Optimizer}%
+%     {2025}%
+%     {Python, NumPy, Pandas, Matplotlib}%
+%   \begin{ResumeItemize}
+%     \RoleContent{PortfolioOptimizerBullet}
+%   \end{ResumeItemize}
+%   \vspace{4pt}%
+% }

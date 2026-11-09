@@ -1,0 +1,94 @@
+% ============================================================
+% sections/experience.tex
+% Renders all work experience entries.
+%
+% HOW IT WORKS (redesigned):
+% 1. \input{} at the top loads the bullet command definitions
+%    from the data/ folder into memory.
+% 2. \ExperienceEntry{} renders the company/role header.
+% 3. \RoleContentOrDefault{prefix}{fallback} picks the bullet
+%    set matching \Role, falling back to a default (usually
+%    SDE) if no bespoke variant exists for that role. Every
+%    real job always shows SOME content, regardless of \Role --
+%    a job never silently disappears from the resume.
+% 4. \RoleTitle{prefix}{default} does the same for job titles
+%    that vary by role (Axis Mutual Fund only).
+%
+% To add a new experience:
+%   1. Create data/experience/yourcompany.tex, defining
+%      \YourCompanySDE (at minimum -- this is the fallback
+%      every other role can land on) plus any role-specific
+%      variants named \YourCompany<Role> exactly.
+%   2. \input{} it below.
+%   3. Add an \ExperienceEntry{} + \RoleContentOrDefault{} block.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% LOAD BULLET LIBRARIES
+% ------------------------------------------------------------
+\input{data/experience/axismutualfund}%          loads \AxisMFSDE, \AxisMFData, \AxisMFTitleData, etc.
+\input{data/experience/internships/wizzer}%      loads \WizzerSDE, \WizzerBackend, etc.
+\input{data/experience/internships/logicblocks}% loads \LogicBlocksSDE, \LogicBlocksBackend, etc.
+\input{data/experience/internships/techligence}% loads \TechligenceSDE, etc. (used by LogicBlocks project bullets)
+
+
+\ResumeSection{Experience}
+
+
+% ============================================================
+% AXIS MUTUAL FUND -- Full-Time (Current)
+% Title AND bullets vary by role. Falls back to "Software
+% Development Engineer" / \AxisMFSDE for any role without a
+% bespoke override.
+% ============================================================
+
+\ExperienceEntry
+  {\AxisMFName}%
+  {\AxisMFDuration}%
+  {\RoleTitle{AxisMF}{Software Development Engineer}}%
+  {\AxisMFLocation}%
+\begin{ResumeItemize}
+  \RoleContentOrDefault{AxisMF}{SDE}
+\end{ResumeItemize}
+\vspace{2pt}
+
+
+% ============================================================
+% WIZZER ADVISOR PVT. LTD. -- Internship
+% Falls back to \WizzerSDE for any role without a bespoke
+% variant. Hidden for SDE, NPCI, and PyDS.
+% ============================================================
+
+\HideForRole{PyDS}{
+\ExperienceEntry
+  {\WizzerName}%
+  {\WizzerDuration}%
+  {Software Engineer Intern}%
+  {\WizzerLocation}%
+\begin{ResumeItemize}
+  \RoleContentOrDefault{Wizzer}{SDE}
+\end{ResumeItemize}
+\vspace{2pt}
+}
+
+
+% ============================================================
+% TECHLIGENCE -- Internship
+% Falls back to \TechligenceSDE for any role without a bespoke
+% variant. Hidden for SDE, NPCI, and PyDS.
+% ============================================================
+
+\HideForRole{SDE}{
+\HideForRole{NPCI}{
+\HideForRole{PyDS}{
+\ExperienceEntry
+  {\TechligenceName}%
+  {\TechligenceDuration}%
+  {Software Engineer Intern}%
+  {\TechligenceLocation}%
+\begin{ResumeItemize}
+  \RoleContentOrDefault{Techligence}{SDE}
+\end{ResumeItemize}
+\vspace{2pt}
+}}}

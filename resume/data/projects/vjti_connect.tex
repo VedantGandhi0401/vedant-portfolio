@@ -1,0 +1,163 @@
+% ============================================================
+% data/projects/vjti_connect.tex
+% Defines all bullet point commands for the VJTI Connect
+% project entry rendered in sections/projects.tex.
+%
+% HOW IT WORKS:
+% Each \newcommand defines one complete set of bullet points
+% for a specific role. sections/projects.tex calls the
+% matching command via \IfRole{} guards.
+%
+% VJTI Connect is shown for engineering roles only:
+%   SDE, Backend, Frontend, FullStack
+% It is hidden for ML, Data, DevOps, Quant, Finance,
+% Consulting because a social networking platform is not
+% relevant signal for those role types.
+%
+% To update a bullet — edit the relevant command below.
+% To add a new role variant:
+%   1. Add \newcommand{\VJTIConnectBulletXxx}{...} here
+%   2. Add \IfXxx{\VJTIConnectBulletXxx} in sections/projects.tex
+% ============================================================
+
+
+% ============================================================
+% METADATA
+% Stores project info for potential future use.
+% Not rendered anywhere in the resume currently.
+% ============================================================
+\newcommand{\VJTIConnectName}    {VJTI Connect}
+\newcommand{\VJTIConnectDuration}{2025 -- Present}
+\newcommand{\VJTIConnectPriority}{A}
+
+
+% ============================================================
+% SDE — Software Development Engineer
+% Signals: full-stack ownership, secure auth, REST API design,
+% and scalable modular architecture on a real platform.
+% ============================================================
+\newcommand{\VJTIConnectBulletSDE}{
+  \item Built a full-stack social networking platform
+        exclusively for VJTI's 4,500+ student campus using
+        the MERN stack, with JWT authentication and
+        role-based access control.
+  \item Designed REST APIs supporting posts, real-time
+        messaging via Socket.IO, comments, notifications
+        and user profiles.
+  \item Structured the backend for horizontal scalability,
+        with independently deployable service modules
+        enabling future feature additions without
+        cross-cutting changes.
+}
+
+
+% ============================================================
+% Backend
+% Signals: Express.js API design, MongoDB schema optimization,
+% JWT auth implementation, and scalable service structure.
+% ============================================================
+\newcommand{\VJTIConnectBulletBackend}{
+  \item Designed REST APIs using Express.js covering
+        authentication, real-time messaging (Socket.IO),
+        social feeds and notifications for VJTI's
+        4,500+ student campus.
+  \item Optimized MongoDB schemas and query patterns for
+        read-heavy social feed and notification workloads.
+  \item Enforced JWT authentication and role-based access
+        control across all protected API routes.
+}
+
+
+% ============================================================
+% Frontend
+% Signals: React + TypeScript UI, reusable components,
+% async data fetching, and state management.
+% ============================================================
+\newcommand{\VJTIConnectBulletFrontend}{
+  \item Built a React + TypeScript UI for VJTI's campus
+        social platform, covering profiles, feeds,
+        real-time messaging and notifications.
+  \item Integrated frontend with backend REST APIs using
+        async data fetching, optimistic UI updates and
+        structured error handling.
+  \item Improved perceived performance through component-
+        level code splitting and efficient state management.
+}
+
+
+% ============================================================
+% Full Stack
+% Signals: end-to-end MERN ownership, auth, REST APIs,
+% and scalable architecture across both layers.
+% ============================================================
+\newcommand{\VJTIConnectBulletFullStack}{
+  \item Built a full-stack social networking platform for
+        VJTI students using the MERN stack end-to-end.
+  \item Developed React frontend interfaces and Express.js
+        backend APIs for complete feature coverage.
+  \item Implemented JWT authentication, MongoDB integration,
+        and RESTful API architecture.
+  \item Designed scalable project architecture supporting
+        future feature additions and user growth.
+}
+
+
+% ============================================================
+% NOTE ON MISSING ROLES
+% ML, Data, DevOps, Quant, Finance, Consulting:
+% VJTI Connect is a social networking platform built on the
+% MERN stack. It carries no relevant signal for ML models,
+% data pipelines, infrastructure, quant algorithms, financial
+% analysis, or business consulting roles.
+% If the platform grows to include ML features (e.g.
+% recommendation engine, NLP search), add \VJTIConnectBulletML
+% here and wire it up in sections/projects.tex.
+% ============================================================
+
+
+% ============================================================
+% NEW ROLES — added in role expansion
+% ============================================================
+
+% SRE
+\newcommand{\VJTIConnectBulletSRE}{
+  \item Designed backend services with reliability and
+        fault tolerance in mind using Node.js and MongoDB.
+  \item Implemented structured error handling and logging
+        to support observability across the platform.
+  \item Used Git-based workflows to maintain stable
+        and consistently deployable application builds.
+}
+
+% Security
+\newcommand{\VJTIConnectBulletSecurity}{
+  \item Implemented JWT authentication and role-based access
+        control across all protected API routes, with input
+        validation and rate limiting on public endpoints.
+  \item Applied OWASP principles to the authentication layer:
+        secure token storage, expiry enforcement and
+        protection against brute-force login attempts.
+  \item Structured error responses to avoid leaking
+        implementation details to unauthenticated clients.
+}
+
+% Analytics
+% ------------------------------------------------------------
+% \VJTIConnectBulletCloud — no dedicated Cloud bullet set
+% exists; reuses the Backend variant as the closest match.
+% ------------------------------------------------------------
+\newcommand{\VJTIConnectBulletCloud}{\VJTIConnectBulletBackend}
+
+\newcommand{\VJTIConnectBulletAnalytics}{
+  \item Designed MongoDB schemas to efficiently store and
+        query user activity and engagement data.
+  \item Built backend APIs exposing usage metrics for
+        posts, messaging, and user interactions.
+  \item Structured data models to support future analytics
+        and reporting on platform activity.
+}
+
+% NPCI — Lead Application Development
+% VJTI Connect is not shown for NPCI; CBASNet is used instead.
+% The \VJTIConnectBulletNPCI command is intentionally not
+% defined so \ProjectSlot{VJTIConnectBullet} skips this entry.

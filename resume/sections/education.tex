@@ -1,0 +1,294 @@
+% ============================================================
+% sections/education.tex
+% Renders your degree and institution.
+% CGPA visibility is toggled by \ifShowCGPA in config.tex.
+% Relevant coursework is role-specific via \IfRole{} guards.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% \ResumeSection{} — defined in settings.tex
+% Renders the bold uppercase "EDUCATION" heading with a rule.
+% ------------------------------------------------------------
+\ResumeSection{Education}
+
+
+% ------------------------------------------------------------
+% \EducationEntry{institution}{duration}{degree}
+% Renders a two-row entry:
+%   Row 1 → bold institution name | duration (right aligned)
+%   Row 2 → degree (full width)
+%
+% To add a second degree, copy this entire block below it.
+% ------------------------------------------------------------
+\EducationEntry
+  {Veermata Jijabai Technological Institute (VJTI), Mumbai}% #1 institution
+  {2021 -- 2025}%                                           % #2 duration
+  {Bachelor of Technology (B.Tech.) in Information Technology}% #3 degree
+
+
+% ------------------------------------------------------------
+% CGPA (Optional)
+% Only rendered when \ShowCGPAtrue is set in config.tex.
+% \ifShowCGPA ... \fi is the LaTeX if-block syntax.
+% Replace 9.12 with your actual CGPA before compiling.
+% ------------------------------------------------------------
+\ifShowCGPA
+  \vspace{1pt}
+  \textbf{CGPA:} 7.55/10% \textbf{} makes "CGPA:" bold
+  \vspace{2pt}
+\fi
+
+
+% ============================================================
+% RELEVANT COURSEWORK (Role-specific)
+% Only one block below renders at a time — whichever matches
+% the \Role set in config.tex.
+%
+% \IfRole{} is defined in settings.tex.
+% It renders its content only when \Role equals that role.
+%
+% To add or remove a course, edit the comma-separated list
+% inside the matching \IfRole{} block below.
+% ============================================================
+
+% ------------------------------------------------------------
+% Backend
+% ------------------------------------------------------------
+\IfBackend{
+  \textbf{Relevant Coursework:}
+  Operating Systems,
+  Computer Networks,
+  DBMS,
+  Distributed Systems
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% SDE
+% ------------------------------------------------------------
+\IfSDE{
+  \textbf{Relevant Coursework:}
+  Data Structures and Algorithms,
+  Operating Systems,
+  DBMS,
+  Computer Networks
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Full Stack
+% ------------------------------------------------------------
+\IfFullStack{
+  \textbf{Relevant Coursework:}
+  Data Structures and Algorithms,
+  Operating Systems,
+  DBMS,
+  Computer Networks
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Frontend
+% ------------------------------------------------------------
+\IfFrontend{
+  \textbf{Relevant Coursework:}
+  Data Structures and Algorithms,
+  Object-Oriented Programming,
+  Computer Networks,
+  Software Engineering
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Machine Learning
+% ------------------------------------------------------------
+\IfML{
+  \textbf{Relevant Coursework:}
+  Machine Learning,
+  Computer Vision,
+  Deep Learning,
+  Pattern Recognition
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Data Engineering
+% ------------------------------------------------------------
+\IfData{
+  \textbf{Relevant Coursework:}
+  Big Data Analytics,
+  Distributed Systems,
+  Data Mining,
+  Cloud Computing
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% DevOps
+% ------------------------------------------------------------
+\IfDevOps{
+  \textbf{Relevant Coursework:}
+  Operating Systems,
+  Computer Networks,
+  Distributed Systems,
+  Cloud Computing
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Quant
+% ------------------------------------------------------------
+\IfQuant{
+  \textbf{Relevant Coursework:}
+  Probability,
+  Statistics,
+  Linear Algebra,
+  Optimization
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Finance
+% ------------------------------------------------------------
+\IfFinance{
+  \textbf{Relevant Coursework:}
+  Statistics,
+  Economics,
+  Financial Mathematics
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Consulting
+% ------------------------------------------------------------
+\IfConsulting{
+  \textbf{Relevant Coursework:}
+  Statistics,
+  Economics,
+  Data Analysis,
+  Business Communication
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% SRE
+% ------------------------------------------------------------
+\IfSRE{
+  \textbf{Relevant Coursework:}
+  Operating Systems,
+  Computer Networks,
+  Distributed Systems,
+  Cloud Computing
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% MLOps
+% ------------------------------------------------------------
+\IfMLOps{
+  \textbf{Relevant Coursework:}
+  Machine Learning,
+  Distributed Systems,
+  Cloud Computing,
+  Data Engineering
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Cloud
+% ------------------------------------------------------------
+\IfCloud{
+  \textbf{Relevant Coursework:}
+  Computer Networks,
+  Operating Systems,
+  Distributed Systems,
+  Cloud Computing
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Security
+% ------------------------------------------------------------
+\IfSecurity{
+  \textbf{Relevant Coursework:}
+  Computer Networks,
+  Operating Systems,
+  Cryptography,
+  Information Security
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Applied Scientist
+% ------------------------------------------------------------
+\IfApplied{
+  \textbf{Relevant Coursework:}
+  Machine Learning,
+  Deep Learning,
+  Statistics,
+  Linear Algebra
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% QuantResearch
+% ------------------------------------------------------------
+\IfQuantResearch{
+  \textbf{Relevant Coursework:}
+  Probability,
+  Statistics,
+  Stochastic Processes,
+  Linear Algebra,
+  Optimization
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% QuantTrader
+% ------------------------------------------------------------
+\IfQuantTrader{
+  \textbf{Relevant Coursework:}
+  Probability,
+  Statistics,
+  Data Structures and Algorithms,
+  Linear Algebra
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% Analytics
+% ------------------------------------------------------------
+\IfAnalytics{
+  \textbf{Relevant Coursework:}
+  Statistics,
+  Data Mining,
+  Big Data Analytics,
+  Data Visualization
+  \vspace{4pt}
+}
+
+% ------------------------------------------------------------
+% NPCI
+% ------------------------------------------------------------
+\IfNPCI{
+  \textbf{Relevant Coursework:}
+  Data Structures and Algorithms,
+  Operating Systems,
+  Computer Networks,
+  Distributed Systems
+  \vspace{2pt}
+}
+
+% ------------------------------------------------------------
+% PyDS — Python Data Scientist / AI Engineer
+% ------------------------------------------------------------
+\IfPyDS{
+  \textbf{Relevant Coursework:}
+  Machine Learning,
+  Deep Learning,
+  Statistics and Probability,
+  Linear Algebra,
+  Data Mining
+  \vspace{2pt}
+}

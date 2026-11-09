@@ -1,0 +1,260 @@
+% ============================================================
+% sections/achievements.tex
+% Renders the combined Achievements & Leadership section.
+%
+% HOW IT WORKS:
+% 1. \input{} loads all achievement command definitions from
+%    data/achievements.tex into memory.
+% 2. \ResumeSection{} renders the section heading.
+% 3. \IfRole{} guards pick the right achievements to display.
+% 4. Leadership bullets follow directly inside the same
+%    ResumeItemize environment (they are role-agnostic).
+%
+% The entire section is toggled by \ifShowAchievements
+% in config.tex — the on/off switch lives in main.tex.
+% (The old \ifShowLeadership flag has been retired now that
+% Leadership is merged here; it remains in config.tex as a
+% no-op for backward compatibility.)
+%
+% To add a new achievement:
+%   1. Define a \newcommand{\YourAchievement} in data/achievements.tex
+%   2. Add it inside the relevant \IfRole{} blocks below
+% ============================================================
+
+
+% ------------------------------------------------------------
+% LOAD ACHIEVEMENT DEFINITIONS
+% Loads all \Achievement command definitions into memory.
+% Does NOT render anything on the page yet.
+% All achievement content lives in data/achievements.tex.
+% ------------------------------------------------------------
+\input{data/achievements}
+
+
+% ------------------------------------------------------------
+% \ResumeSection{} — defined in settings.tex
+% Renders the bold uppercase "ACHIEVEMENTS & LEADERSHIP"
+% heading with a full-width horizontal rule underneath.
+% ------------------------------------------------------------
+\ResumeSection{Achievements \& Leadership}
+
+
+% ------------------------------------------------------------
+% \begin{ResumeItemize} — defined in settings.tex
+% Opens the bullet list. All \IfRole{} blocks and leadership
+% items must sit inside this environment.
+% ------------------------------------------------------------
+\begin{ResumeItemize}
+
+  % ==========================================================
+  % SDE
+  % Competitive programming + hackathon — shows problem
+  % solving ability relevant to general SDE interviews.
+  % ==========================================================
+  \IfSDE{
+    \LeetCode%      700+ DSA problems — signals strong fundamentals
+    \Codeforces%    competitive rating — fill in XXXX with your real rating
+  }
+
+  % ==========================================================
+  % Backend
+  % LeetCode for DSA, AWS cert for cloud credibility,
+  % open source for real-world backend contribution signal.
+  % ==========================================================
+  \IfBackend{
+    \LeetCode%    DSA fundamentals
+    \AWS%         cloud/infrastructure credibility
+  }
+
+  % ==========================================================
+  % Frontend
+  % No dedicated Frontend achievement exists yet (hackathon/
+  % open-source placeholders were dropped -- see notes below).
+  % LeetCode used as a baseline signal so this block isn't
+  % empty. Replace once you have a real Frontend-relevant win.
+  % ==========================================================
+  \IfFrontend{
+    \LeetCode%    DSA fundamentals (placeholder until real content exists)
+  }
+
+  % ==========================================================
+  % Full Stack
+  % LeetCode for DSA, hackathon for end-to-end shipping,
+  % open source for full stack contribution signal.
+  % ==========================================================
+  \IfFullStack{
+    \LeetCode%    DSA fundamentals
+  }
+
+  % ==========================================================
+  % ML
+  % Research paper for academic credibility,
+  % Google ML cert for formal ML training signal,
+  % hackathon for applied ML project signal.
+  % ==========================================================
+  \IfML{
+    \ResearchPaper% academic/research credibility
+    \GoogleML%      formal ML training signal
+  }
+
+  % ==========================================================
+  % Data
+  % Research paper for data/analytical credibility,
+  % Google ML cert for data science adjacent signal.
+  % ==========================================================
+  \IfData{
+    \ResearchPaper% analytical credibility
+    \GoogleML%      data science adjacent signal
+  }
+
+  % ==========================================================
+  % DevOps
+  % AWS cert is the most directly relevant achievement,
+  % open source for infrastructure tooling contribution signal.
+  % ==========================================================
+  \IfDevOps{
+    \AWS%         most relevant cert for DevOps roles
+  }
+
+  % ==========================================================
+  % Quant
+  % LeetCode + Codeforces signal strong algorithmic ability,
+  % CGPA signals academic rigour expected in quant roles.
+  % ==========================================================
+  \IfQuant{
+    \LeetCode%        algorithmic ability
+    \CGPAAchievement% academic rigour signal
+  }
+
+  % ==========================================================
+  % Finance
+  % CGPA signals academic performance expected in finance,
+  % leadership signals team and stakeholder management ability.
+  % ==========================================================
+  \IfFinance{
+    \CGPAAchievement% academic performance signal
+  }
+
+  % ==========================================================
+  % Consulting
+  % ==========================================================
+  \IfConsulting{
+    \CGPAAchievement% academic credibility
+  }
+
+  % ==========================================================
+  % SRE
+  % AWS cert for infrastructure credibility,
+  % open source for tooling contribution signal,
+  % LeetCode for systems problem solving.
+  % ==========================================================
+  \IfSRE{
+    \AWS%         cloud/infrastructure credibility
+    \LeetCode%    systems problem solving
+  }
+
+  % ==========================================================
+  % MLOps
+  % Google ML cert for ML pipeline credibility,
+  % research paper for model development signal,
+  % AWS for cloud ML infrastructure signal.
+  % ==========================================================
+  \IfMLOps{
+    \GoogleML%      ML pipeline credibility
+    \ResearchPaper% model development signal
+    \AWS%           cloud ML infrastructure signal
+  }
+
+  % ==========================================================
+  % Cloud
+  % AWS cert directly relevant,
+  % open source for infrastructure tooling signal.
+  % ==========================================================
+  \IfCloud{
+    \AWS%         most relevant cert
+  }
+
+  % ==========================================================
+  % Security
+  % LeetCode for algorithmic problem solving,
+  % open source for security tooling contribution signal.
+  % ==========================================================
+  \IfSecurity{
+    \LeetCode%    algorithmic problem solving
+  }
+
+  % ==========================================================
+  % Applied Scientist
+  % Research paper for applied ML credibility,
+  % Google ML cert for formal training signal,
+  % hackathon for applied project signal.
+  % ==========================================================
+  \IfApplied{
+    \ResearchPaper% applied ML credibility
+    \GoogleML%      formal ML training signal
+  }
+
+  % ==========================================================
+  % QuantResearch
+  % LeetCode + Codeforces for algorithmic ability,
+  % CGPA for academic rigour expected in research roles.
+  % ==========================================================
+  \IfQuantResearch{
+    \LeetCode%        algorithmic ability
+    \CGPAAchievement% academic rigour
+  }
+
+  % ==========================================================
+  % QuantTrader
+  % LeetCode + Codeforces for fast problem solving,
+  % CGPA for academic credibility in trading roles.
+  % ==========================================================
+  \IfQuantTrader{
+    \LeetCode%        fast problem solving
+    \CGPAAchievement% academic credibility
+  }
+
+  % ==========================================================
+  % Analytics
+  % Research paper for analytical credibility,
+  % Google ML cert for data science adjacent signal.
+  % ==========================================================
+  \IfAnalytics{
+    \ResearchPaper% analytical credibility
+    \GoogleML%      data science adjacent signal
+  }
+
+  % ==========================================================
+  % NPCI — Lead Application Development
+  % AWS cert signals cloud/infra credibility relevant to
+  % production systems role; LeetCode for DSA fundamentals.
+  % ==========================================================
+  \IfNPCI{
+    \AWS%       cloud/infra credibility
+    \LeetCode%  DSA fundamentals
+  }
+
+  % ==========================================================
+  % PyDS — Python Data Scientist / AI Engineer
+  % Research paper for ML/data science credibility,
+  % Google ML cert for formal training signal.
+  % ==========================================================
+  \IfPyDS{
+    \ResearchPaper% ML/data science credibility
+    \GoogleML%      formal ML training signal
+  }
+
+  % ==========================================================
+  % LEADERSHIP (role-agnostic — shown for all roles)
+  % Follows the role-specific achievements inside the same
+  % bullet list so both categories appear under one heading.
+  % ==========================================================
+  \item \textbf{Executive \& Sponsorship Head, Pratibimb (VJTI)} --
+    Led sponsorship outreach and event execution for Pratibimb,
+    VJTI's annual techno-cultural fest, over a year-long tenure.
+  \item \textbf{Core Team Member, Community of Coders (COC), VJTI} --
+    Mentored the entire junior batch through 10--12 sessions
+    annually and helped organize hackathons, competitions, and
+    technical workshops as part of the core team.
+
+\end{ResumeItemize}

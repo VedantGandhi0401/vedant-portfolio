@@ -1,0 +1,58 @@
+% ============================================================
+% data/projects/logicblocks.tex
+% Defines the project header for the LogicBlocks entry
+% rendered in sections/projects.tex.
+%
+% WHY ONLY A HEADER?
+% The bullet point commands (\LogicBlocksSDE, \LogicBlocksBackend,
+% \LogicBlocksFrontend, \LogicBlocksML) are defined in:
+%   data/experience/internships/logicblocks.tex
+%
+% They live there because LogicBlocks is the platform you
+% built during your TECHLIGENCE internship (corrected -- an
+% earlier version of this file said "Wizzer", which was wrong
+% and paired with the wrong tech stack). The bullet commands
+% are shared between the internship context (experience) and
+% the project context (projects).
+%
+% sections/experience.tex loads logicblocks.tex via \input{}
+% which puts all bullet commands into memory. By the time
+% sections/projects.tex runs, those commands already exist
+% and can be called directly — no need to redefine them here.
+%
+% Redefining them here would cause:
+%   "LaTeX Error: Command \LogicBlocksSDE already defined."
+%
+% HEADER DEFINITION LIVES HERE because the project entry
+% needs its own name, duration, and tech stack that is
+% slightly different from how it appears in experience.
+% ============================================================
+
+
+% ============================================================
+% \ProjectLogicBlocksHeader
+% Renders the LogicBlocks project entry header.
+% Called directly in sections/projects.tex before
+% \begin{ResumeItemize}.
+%
+% \ProjectEntry{name}{duration}{techstack} is defined
+% in settings.tex. It renders:
+%   Row 1 → bold project name | duration (right aligned)
+%   Row 2 → italic tech stack (full width)
+% ============================================================
+\newcommand{\ProjectLogicBlocksHeader}{%
+  \ProjectEntry
+    {LogicBlocks -- Visual Programming Platform}% #1 project name
+    {\TechligenceDuration}%                      % #2 duration (matches the internship it was built during)
+    {React.js, Redux, Scratch VM, Blockly, WaveSurfer.js, Web Audio API}% #3 tech stack
+}
+
+
+% ============================================================
+% NOTE ON ADDING NEW ROLE VARIANTS
+% If you need LogicBlocks bullets for a role that currently
+% has none (e.g. DevOps, Data), add the command in:
+%   data/experience/internships/logicblocks.tex
+% NOT here — to keep all bullet definitions in one place.
+% Then wire it up in sections/projects.tex.
+% ============================================================

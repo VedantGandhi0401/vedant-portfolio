@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated resume PDFs (compiled by scripts/build-resume.sh)
+# Commit these if you want them in the repo; otherwise they are
+# produced locally and served from public/ during dev/build.
+/public/resume-*.pdf
+
+# LaTeX aux files (should never appear here — build uses /tmp)
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.fls
+resume/*.fdb_latexmk

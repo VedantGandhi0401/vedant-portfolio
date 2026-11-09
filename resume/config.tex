@@ -1,0 +1,110 @@
+% ============================================================
+% config.tex
+% This is the ONLY file you need to edit per job application.
+% Change \Role and \Company before every compile.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% ROLE
+% Controls which bullet points, skills, coursework, and
+% achievements appear throughout the entire resume.
+%
+% Valid values:
+%
+%   --- Software Engineering ---
+%   SDE          → General Software Development Engineer
+%   Backend      → Backend / Server-side Engineer
+%   Frontend     → Frontend / UI Engineer
+%   FullStack    → Full Stack Engineer
+%   SRE          → Site Reliability Engineer
+%   DevOps       → DevOps / Infrastructure Engineer
+%   Cloud        → Cloud Engineer
+%   Security     → Security Engineer
+%   MLOps        → ML Operations Engineer
+%
+%   --- Data & AI ---
+%   ML           → Machine Learning Engineer
+%   Applied      → Applied Scientist / Applied ML
+%   Data         → Data Engineer / Analytics Engineer
+%   Analytics    → Analytics Engineer / Data Analyst
+%
+%   --- Quant & Finance ---
+%   Quant        → Quantitative Analyst (general)
+%   QuantResearch → Quantitative Researcher
+%   QuantTrader  → Quantitative Trader
+%   Finance      → Finance / Investment roles
+%
+%   --- Business ---
+%   Consulting   → Management / Business Consulting
+%
+%   --- NPCI ---
+%   NPCI         → Lead Application Development, NPCI
+%                  (Java/Spring Boot, fintech, Redis, Kafka, AI)
+%   PyDS         → Python Data Scientist / AI Engineer
+%                  (ML/DL, Graph AI, LLMs, RAG, fraud detection,
+%                   PyTorch, scikit-learn, XGBoost, GNN)
+%
+% For target companies see companies.tex
+% ------------------------------------------------------------
+\newcommand{\Role}{PyDS}
+
+
+% ------------------------------------------------------------
+% COMPANY
+% The target company name. Copy from companies.tex.
+% ------------------------------------------------------------
+\newcommand{\Company}{NPCI}
+
+
+% ============================================================
+% OPTIONAL SECTION TOGGLES
+% ============================================================
+
+% ------------------------------------------------------------
+% CGPA — show/hide CGPA line in education section
+% ------------------------------------------------------------
+\newif\ifShowCGPA
+\ShowCGPAfalse
+
+
+% ------------------------------------------------------------
+% RESEARCH — reserved for future sections/research.tex
+% ------------------------------------------------------------
+\newif\ifShowResearch
+\ShowResearchfalse
+
+
+% ------------------------------------------------------------
+% CERTIFICATIONS — enable once sections/certifications.tex exists
+% ------------------------------------------------------------
+\newif\ifShowCertifications
+\ShowCertificationsfalse
+
+
+% ------------------------------------------------------------
+% ACHIEVEMENTS — show/hide entire achievements section
+% ------------------------------------------------------------
+\newif\ifShowAchievements
+\ShowAchievementstrue
+
+
+% ------------------------------------------------------------
+% LEADERSHIP — RETIRED (no-op kept for backward compatibility)
+% Leadership is now merged into the Achievements section.
+% To hide leadership bullets, edit sections/achievements.tex
+% directly (comment out the two \item lines at the bottom).
+% ------------------------------------------------------------
+\newif\ifShowLeadership
+\ShowLeadershiptrue
+
+
+% ------------------------------------------------------------
+% MAX PROJECTS — caps how many project entries render,
+% regardless of how many match the current \Role. Projects are
+% tried in the priority order they appear in
+% sections/projects.tex, so the highest-priority matches win
+% the available slots. Reorder the blocks there to change
+% priority; change this number to show more or fewer.
+% ------------------------------------------------------------
+\newcommand{\MaxProjects}{2}

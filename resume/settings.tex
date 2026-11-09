@@ -1,0 +1,458 @@
+% ============================================================
+% settings.tex
+% Loads all packages and defines every reusable command used
+% across sections/. Nothing here changes per job application.
+% Only edit this file if you want to change visual formatting.
+% ============================================================
+
+
+% ============================================================
+% PACKAGES
+% \usepackage{} loads external LaTeX libraries.
+% ============================================================
+
+% ------------------------------------------------------------
+% geometry — controls page margins.
+% All 4 sides set to 0.45in to maximise usable space.
+% ------------------------------------------------------------
+\usepackage[
+  left=0.45in,
+  right=0.45in,
+  top=0.4in,
+  bottom=0.4in
+]{geometry}
+
+% ------------------------------------------------------------
+% array — extends table column formatting options.
+% Needed for the tabular* layouts in entry commands.
+% ------------------------------------------------------------
+\usepackage{array}
+
+% ------------------------------------------------------------
+% ifthen — provides \ifthenelse{}{}{} conditional logic.
+% Used by all \IfRole{} commands at the bottom of this file.
+% ------------------------------------------------------------
+\usepackage{ifthen}
+
+% ------------------------------------------------------------
+% enumitem — gives fine control over list spacing.
+% Used to tighten bullet point gaps in \ResumeItemize.
+% ------------------------------------------------------------
+\usepackage{enumitem}
+
+% ------------------------------------------------------------
+% hyperref — makes URLs and emails clickable in the PDF.
+% hidelinks removes the colored boxes around links.
+% ------------------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+
+% ------------------------------------------------------------
+% xcolor — enables colored text.
+% Used by hypersetup below to color links blue.
+% ------------------------------------------------------------
+\usepackage{xcolor}
+
+% ------------------------------------------------------------
+% fontawesome — provides icons like \faGithub, \faEnvelope.
+% Used in sections/header.tex for contact icons.
+% ------------------------------------------------------------
+\usepackage{fontawesome}
+
+% ------------------------------------------------------------
+% titlesec — controls section title formatting.
+% Used to style \section{} in \ResumeSection below.
+% ------------------------------------------------------------
+\usepackage{titlesec}
+
+% ------------------------------------------------------------
+% tabularx — provides a table that stretches to full width.
+% Used in entry commands for left/right aligned rows.
+% ------------------------------------------------------------
+\usepackage{tabularx}
+
+
+% ============================================================
+% PAGE SETTINGS
+% ============================================================
+
+% ------------------------------------------------------------
+% pagestyle{empty} removes page numbers and headers/footers.
+% A resume should have no page number.
+% ------------------------------------------------------------
+\pagestyle{empty}
+
+% ------------------------------------------------------------
+% Remove all paragraph indentation and spacing between paras.
+% Keeps the layout tight and predictable.
+% ------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+
+% ============================================================
+% HYPERLINK COLORS
+% colorlinks=true  → links are colored text, not boxed.
+% urlcolor=blue    → external URLs appear in blue.
+% linkcolor=blue   → internal links appear in blue.
+% ============================================================
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue
+}
+
+
+% ============================================================
+% REUSABLE COMMANDS
+% These are the building blocks used in every section file.
+% #1, #2, #3, #4 are positional arguments passed when called.
+% ============================================================
+
+% ------------------------------------------------------------
+% \ResumeSection{title}
+% Renders a bold uppercase section heading with a full-width
+% horizontal rule underneath it.
+% #1 → section title text (e.g. "Experience")
+% ------------------------------------------------------------
+\newcommand{\ResumeSection}[1]{%
+  \vspace{4pt}%                  % space above the heading
+  {\large\bfseries\MakeUppercase{#1}}% large bold uppercase title
+  \vspace{1pt}%                  % space between title and rule
+  \hrule%                        % full-width horizontal line
+  \vspace{4pt}%                  % space below the rule
+}
+
+% ------------------------------------------------------------
+% \ResumeName{name}
+% Renders your name centered at the top in huge bold text.
+% #1 → your full name (e.g. "VEDANT GANDHI")
+% ------------------------------------------------------------
+\newcommand{\ResumeName}[1]{%
+  \begin{center}%
+    {\Huge\bfseries #1}%         % huge bold name
+  \end{center}%
+  \vspace{-4pt}%                 % pull next line slightly closer
+}
+
+% ------------------------------------------------------------
+% \ResumeContact{content}
+% Renders contact info centered below the name.
+% #1 → raw content (icons, links, separators) from header.tex
+% ------------------------------------------------------------
+\newcommand{\ResumeContact}[1]{%
+  \begin{center}%
+    #1%                          % renders whatever is passed in
+  \end{center}%
+  \vspace{4pt}%                  % space below contact line
+}
+
+% ------------------------------------------------------------
+% \EducationEntry{institution}{duration}{degree}
+% Renders one education entry as a two-column row.
+% Left  → bold institution name
+% Right → duration (e.g. "2022 -- 2026")
+% Below → degree on a full-width second row
+% #1 → institution name
+% #2 → duration
+% #3 → degree
+% ------------------------------------------------------------
+\newcommand{\EducationEntry}[3]{%
+  \noindent%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}%
+    \textbf{#1} & #2\\%          % institution (bold) | duration
+    \multicolumn{2}{@{}l}{#3}%   % degree spans full width
+  \end{tabular*}%
+  \vspace{3pt}%
+}
+
+% ------------------------------------------------------------
+% \ExperienceEntry{company}{duration}{role}{location}
+% Renders one experience entry as a two-column two-row header.
+% Row 1 → bold company name | duration
+% Row 2 → italic role title  | italic location
+% #1 → company name
+% #2 → duration (e.g. "Jun 2024 -- Aug 2024")
+% #3 → role title
+% #4 → location
+% ------------------------------------------------------------
+\newcommand{\ExperienceEntry}[4]{%
+  \noindent%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}%
+    \textbf{#1} & #2\\%          % company (bold) | duration
+    \textit{#3} & \textit{#4}%   % role (italic)  | location (italic)
+  \end{tabular*}%
+  \vspace{2pt}%
+}
+
+% ------------------------------------------------------------
+% \ProjectEntry{name}{duration}{techstack}
+% Renders one project entry header.
+% Row 1 → bold project name | duration
+% Row 2 → italic tech stack (full width)
+% #1 → project name
+% #2 → duration (e.g. "2025 -- Present")
+% #3 → tech stack (e.g. "React, Node.js, MongoDB")
+% ------------------------------------------------------------
+\newcommand{\ProjectEntry}[3]{%
+  \noindent%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}%
+    \textbf{#1} & #2%            % project name (bold) | duration
+  \end{tabular*}\\[-2pt]%        % force tech stack onto its own line
+  \textit{#3}%                   % tech stack in italics below
+  \vspace{2pt}%
+}
+
+% ------------------------------------------------------------
+% ResumeItemize environment
+% A wrapper around itemize with tightened spacing.
+% Use \begin{ResumeItemize} ... \end{ResumeItemize}
+% instead of \begin{itemize} for consistent bullet styling.
+% ------------------------------------------------------------
+\newenvironment{ResumeItemize}
+  {\begin{itemize}}%             % opens a standard itemize
+  {\end{itemize}}%               % closes it
+
+% Tighten all itemize lists globally (applies to ResumeItemize too).
+% leftmargin  → indent of bullets from left edge
+% itemsep     → vertical space between bullet items
+% topsep      → space before the first bullet
+% parsep      → space between paragraphs inside an item
+% partopsep   → extra space when list starts a new paragraph
+\setlist[itemize]{
+  leftmargin=14pt,
+  itemsep=1pt,
+  topsep=1pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ------------------------------------------------------------
+% \SkillCategory{category}{skills}
+% Renders one row of skills with a bold category label.
+% #1 → category name (e.g. "Languages")
+% #2 → comma-separated skills (e.g. "Java, Python, C++")
+% ------------------------------------------------------------
+\newcommand{\SkillCategory}[2]{%
+  \item \textbf{#1}: #2%
+  \vspace{0pt}%
+}
+
+% ------------------------------------------------------------
+% \Achievement{text}
+% Renders one achievement as a bullet item.
+% Must be used inside a ResumeItemize environment.
+% #1 → achievement text
+% ------------------------------------------------------------
+\newcommand{\Achievement}[1]{%
+  \item #1%      % standard bullet item 
+}
+
+% ------------------------------------------------------------
+% Spacing helpers — use these instead of raw \vspace{} calls
+% to keep spacing consistent and easy to adjust globally.
+% ------------------------------------------------------------
+\newcommand{\SmallSpace}{\vspace{2pt}}
+\newcommand{\MediumSpace}{\vspace{5pt}}
+
+
+% ============================================================
+% ROLE CONDITION COMMANDS
+% Each command takes one argument: the content to show.
+% Content is only rendered if \Role matches the command's role.
+% \ifthenelse{condition}{if true}{if false}
+% \equal{a}{b} returns true if a and b are the same string.
+%
+% Usage example in a section file:
+%   \IfBackend{ \WizzerBackend }
+%   → only renders \WizzerBackend when \Role is "Backend"
+% ============================================================
+
+\newcommand{\IfSDE}[1]{%
+  \ifthenelse{\equal{\Role}{SDE}}{#1}{}%
+}
+
+\newcommand{\IfBackend}[1]{%
+  \ifthenelse{\equal{\Role}{Backend}}{#1}{}%
+}
+
+\newcommand{\IfFrontend}[1]{%
+  \ifthenelse{\equal{\Role}{Frontend}}{#1}{}%
+}
+
+\newcommand{\IfFullStack}[1]{%
+  \ifthenelse{\equal{\Role}{FullStack}}{#1}{}%
+}
+
+\newcommand{\IfML}[1]{%
+  \ifthenelse{\equal{\Role}{ML}}{#1}{}%
+}
+
+\newcommand{\IfData}[1]{%
+  \ifthenelse{\equal{\Role}{Data}}{#1}{}%
+}
+
+\newcommand{\IfDevOps}[1]{%
+  \ifthenelse{\equal{\Role}{DevOps}}{#1}{}%
+}
+
+\newcommand{\IfQuant}[1]{%
+  \ifthenelse{\equal{\Role}{Quant}}{#1}{}%
+}
+
+\newcommand{\IfFinance}[1]{%
+  \ifthenelse{\equal{\Role}{Finance}}{#1}{}%
+}
+
+\newcommand{\IfConsulting}[1]{%
+  \ifthenelse{\equal{\Role}{Consulting}}{#1}{}%
+}
+
+\newcommand{\IfSRE}[1]{%
+  \ifthenelse{\equal{\Role}{SRE}}{#1}{}%
+}
+
+\newcommand{\IfMLOps}[1]{%
+  \ifthenelse{\equal{\Role}{MLOps}}{#1}{}%
+}
+
+\newcommand{\IfCloud}[1]{%
+  \ifthenelse{\equal{\Role}{Cloud}}{#1}{}%
+}
+
+\newcommand{\IfSecurity}[1]{%
+  \ifthenelse{\equal{\Role}{Security}}{#1}{}%
+}
+
+\newcommand{\IfApplied}[1]{%
+  \ifthenelse{\equal{\Role}{Applied}}{#1}{}%
+}
+
+\newcommand{\IfQuantResearch}[1]{%
+  \ifthenelse{\equal{\Role}{QuantResearch}}{#1}{}%
+}
+
+\newcommand{\IfQuantTrader}[1]{%
+  \ifthenelse{\equal{\Role}{QuantTrader}}{#1}{}%
+}
+
+\newcommand{\IfAnalytics}[1]{%
+  \ifthenelse{\equal{\Role}{Analytics}}{#1}{}%
+}
+
+\newcommand{\IfNPCI}[1]{%
+  \ifthenelse{\equal{\Role}{NPCI}}{#1}{}%
+}
+
+\newcommand{\IfPyDS}[1]{%
+  \ifthenelse{\equal{\Role}{PyDS}}{#1}{}%
+}
+
+
+% ============================================================
+% ROLE DISPATCH
+% Replaces hand-written 18-line \IfRole{} chains in
+% sections/experience.tex and sections/projects.tex with a
+% single lookup by NAME, using \ifcsname (checks whether a
+% command exists without calling it).
+%
+% Naming convention: for a company/project prefix like
+% "Wizzer", the bullet set for each role must be named
+% \Wizzer<Role> exactly (e.g. \WizzerSDE, \WizzerBackend).
+% Get the name wrong and it's simply treated as "no content" —
+% it renders nothing, it does NOT throw a compile error the
+% way a bare \IfRole{\SomeTypo} used to.
+% ============================================================
+
+% ------------------------------------------------------------
+% \RoleContent{prefix}
+% Renders \<prefix><Role> if it exists, else renders nothing.
+% Use for content where "not relevant to this role" is a
+% legitimate outcome (project bullets) — pair with
+% \IfRoleContent so the whole entry disappears together.
+% ------------------------------------------------------------
+\newcommand{\RoleContent}[1]{%
+  \expandafter\ifcsname #1\Role\endcsname
+    \csname #1\Role\endcsname
+  \fi
+}
+
+% ------------------------------------------------------------
+% \RoleContentOrDefault{prefix}{fallback role name}
+% Renders \<prefix><Role> if it exists, else falls back to
+% \<prefix><fallback>. Use for real jobs (experience entries),
+% which should always show *something* regardless of \Role —
+% a real employer should never silently vanish from the resume
+% just because that role has no bespoke bullet set yet.
+% ------------------------------------------------------------
+\newcommand{\RoleContentOrDefault}[2]{%
+  \expandafter\ifcsname #1\Role\endcsname
+    \csname #1\Role\endcsname
+  \else
+    \csname #1#2\endcsname
+  \fi
+}
+
+% ------------------------------------------------------------
+% \IfRoleContent{prefix}{block}
+% Renders #2 only if \<prefix><Role> exists. Wrap an entire
+% project entry (header + tech stack + bullets) in this so the
+% header disappears too when there's no content for the
+% current role, instead of showing a heading with nothing
+% underneath it.
+% ------------------------------------------------------------
+\newcommand{\IfRoleContent}[2]{%
+  \expandafter\ifcsname #1\Role\endcsname
+    #2%
+  \fi
+}
+
+% ------------------------------------------------------------
+% \RoleTitle{prefix}{default}
+% Looks up \<prefix>Title<Role> for a role-specific job-title
+% override (e.g. \AxisMFTitleData = "Data Engineer"). Falls
+% back to #2 if no override exists for the current role.
+% ------------------------------------------------------------
+\newcommand{\RoleTitle}[2]{%
+  \expandafter\ifcsname #1Title\Role\endcsname
+    \csname #1Title\Role\endcsname
+  \else
+    #2%
+  \fi
+}
+
+% ------------------------------------------------------------
+% \HideForRole{role}{block}
+% Renders #2 for every \Role EXCEPT the one named in #1.
+% Use this to suppress an entire experience entry (header +
+% bullets) for one specific role, when \RoleContentOrDefault's
+% "always show something" behaviour isn't what you want.
+%   Example: wrap the whole Techligence \ExperienceEntry block
+%   in \HideForRole{SDE}{ ... } to hide it only for SDE, while
+%   every other role still shows it normally.
+% To hide for more than one role, nest calls:
+%   \HideForRole{SDE}{\HideForRole{Backend}{ ... }}
+% ------------------------------------------------------------
+\newcommand{\HideForRole}[2]{%
+  \ifthenelse{\equal{\Role}{#1}}{}{#2}%
+}
+
+% ------------------------------------------------------------
+% \ProjectSlot{prefix}{block}
+% Like \IfRoleContent, but also respects \MaxProjects (set in
+% config.tex): once that many projects have already been shown
+% for the current \Role, later calls render nothing even if
+% content exists for that role. Call sites earlier in
+% sections/projects.tex therefore act as higher priority.
+% Requires the projectsshown counter (declared below).
+% ------------------------------------------------------------
+\newcounter{projectsshown}
+\setcounter{projectsshown}{0}
+
+\newcommand{\ProjectSlot}[2]{%
+  \expandafter\ifcsname #1\Role\endcsname
+    \ifnum\value{projectsshown}<\MaxProjects
+      #2%
+      \stepcounter{projectsshown}%
+    \fi
+  \fi
+}

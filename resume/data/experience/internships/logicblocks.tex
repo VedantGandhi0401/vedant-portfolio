@@ -1,0 +1,184 @@
+% ============================================================
+% data/experience/internships/logicblocks.tex
+% Defines all bullet point commands for the LogicBlocks
+% platform -- used in TWO places:
+%
+%   1. sections/experience.tex -- NOT directly. The Techligence
+%      entry covers the internship. These bullets are used
+%      as the PROJECT entry for LogicBlocks in projects.tex.
+%
+%   2. sections/projects.tex -- \LogicBlocksSDE,
+%      \LogicBlocksBackend, \LogicBlocksFrontend, \LogicBlocksML,
+%      etc. are called here via \RoleContent{LogicBlocks}.
+%
+% CORRECTED ATTRIBUTION: LogicBlocks was built during the
+% TECHLIGENCE internship (not Wizzer -- an earlier version of
+% this file had the wrong company's stack copy-pasted in:
+% Vue.js/Fastify/Redis/Bitbucket. The real stack is React.js,
+% Redux, a custom Scratch VM, and WaveSurfer.js/Web Audio API,
+% confirmed against \TechligenceSDE in techligence.tex).
+%
+% Bullets below only claim what's been confirmed: React.js,
+% Redux, custom Scratch VM block execution, proprietary
+% Blockly block integration, WaveSurfer.js + Web Audio API
+% (waveform visualization, playback, trimming, sync), Git,
+% Jira, code reviews. Teachable Machine / Three.js / Redis /
+% Fastify claims from the old version were dropped -- they
+% were never confirmed and may have been more copy-paste from
+% the wrong company. Add them back in only if they're real.
+%
+% To update a bullet -- edit the relevant command below.
+% To add a new role variant:
+%   1. Add \newcommand{\LogicBlocksXxx}{...} here
+%   2. It's picked up automatically by \RoleContent{LogicBlocks}
+%      in sections/projects.tex -- no wiring needed elsewhere.
+% ============================================================
+
+
+% ============================================================
+% METADATA
+% ============================================================
+\newcommand{\LogicBlocksName}    {LogicBlocks}
+\newcommand{\LogicBlocksPriority}{6}
+
+
+% ============================================================
+% SDE — Software Development Engineer
+% ============================================================
+\newcommand{\LogicBlocksSDE}{
+  \item Shipped production features for LogicBlocks — a
+        browser-based visual programming platform for K-12
+        students — using React.js, Redux and a custom
+        Scratch VM fork.
+  \item Extended the Scratch VM runtime with custom block
+        execution logic, enabling proprietary Blockly blocks
+        to run with full JavaScript runtime behaviour.
+  \item Integrated WaveSurfer.js and the Web Audio API to
+        deliver waveform visualization, playback control,
+        audio trimming and block-synchronized audio.
+}
+
+
+% ============================================================
+% Backend
+% ============================================================
+\newcommand{\LogicBlocksBackend}{
+  \item Extended the Scratch VM runtime with custom block
+        opcodes and async event handlers for LogicBlocks,
+        enabling proprietary Blockly blocks to execute
+        with full JavaScript runtime behaviour.
+  \item Bridged browser-side APIs (Web Audio API) with the
+        VM execution pipeline, synchronizing visual block
+        execution with audio playback and trimming.
+}
+
+
+% ============================================================
+% Frontend
+% ============================================================
+\newcommand{\LogicBlocksFrontend}{
+  \item Built React.js and Redux components for LogicBlocks,
+        a K-12 visual programming platform, including a
+        drag-and-drop editor built on Scratch GUI.
+  \item Integrated WaveSurfer.js and the Web Audio API to
+        implement waveform visualization, playback control,
+        trimming and audio synchronization in the editor.
+  \item Extended the Scratch VM's block execution logic to
+        support custom proprietary Blockly blocks.
+}
+
+
+% ============================================================
+% ML — Machine Learning
+% No confirmed ML-specific work on LogicBlocks (the old
+% Teachable Machine claim was unconfirmed and dropped). This
+% variant frames the same real work through an ML-adjacent
+% lens: the Scratch VM execution engine.
+% ============================================================
+\newcommand{\LogicBlocksML}{
+  \item Extended a Scratch VM fork with custom block execution
+        logic for LogicBlocks, a browser-based visual
+        programming platform.
+  \item Built React.js/Redux tooling around the execution
+        engine, including audio processing features
+        (WaveSurfer.js, Web Audio API).
+}
+
+
+% ============================================================
+% SRE
+% ============================================================
+\newcommand{\LogicBlocksSRE}{
+  \item Developed and debugged core execution logic (Scratch
+        VM fork) for LogicBlocks, a production educational
+        platform used by students.
+  \item Collaborated using Git and Jira-based workflows,
+        maintaining stable, production-ready releases.
+}
+
+
+% ============================================================
+% MLOps
+% ============================================================
+\newcommand{\LogicBlocksMLOps}{
+  \item Extended a Scratch VM fork with custom block execution
+        logic powering LogicBlocks' visual programming runtime.
+  \item Built and shipped features (React.js/Redux) through
+        Agile, Git- and Jira-based development workflows.
+}
+
+
+% ============================================================
+% Cloud
+% ============================================================
+\newcommand{\LogicBlocksCloud}{
+  \item Developed production features for LogicBlocks using
+        React.js and Redux, deployed and iterated through
+        Git/Jira-based Agile workflows.
+  \item Extended the Scratch VM execution engine with custom
+        block logic and proprietary Blockly block integrations.
+}
+
+
+% ============================================================
+% Security
+% ============================================================
+\newcommand{\LogicBlocksSecurity}{
+  \item Implemented custom block execution logic in a Scratch
+        VM fork, handling user-authored code running inside
+        the platform's sandboxed runtime.
+  \item Followed secure development practices including code
+        reviews and Agile-based delivery workflows.
+}
+
+
+% ============================================================
+% Applied
+% ============================================================
+\newcommand{\LogicBlocksApplied}{
+  \item Extended a Scratch VM fork with custom block execution
+        logic for LogicBlocks, a browser-based visual
+        programming platform used by students.
+  \item Built React.js/Redux features and integrated
+        WaveSurfer.js/Web Audio API for audio editing
+        workflows.
+}
+
+
+% ============================================================
+% Analytics
+% ============================================================
+\newcommand{\LogicBlocksAnalytics}{
+  \item Built production features (React.js, Redux) for
+        LogicBlocks, an educational visual programming
+        platform.
+  \item Extended the Scratch VM execution engine with custom
+        block logic supporting student-authored programs.
+}
+
+
+% ------------------------------------------------------------
+% \LogicBlocksFullStack — no dedicated FullStack bullet set
+% exists; reuses the SDE variant as the closest match.
+% ------------------------------------------------------------
+\newcommand{\LogicBlocksFullStack}{\LogicBlocksSDE}

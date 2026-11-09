@@ -1,0 +1,161 @@
+% ============================================================
+% data/projects/crop_detection.tex
+% Defines all bullet point commands for the Crop Change
+% Detection project entry rendered in sections/projects.tex.
+%
+% HOW IT WORKS:
+% Each \newcommand defines one complete set of bullet points
+% for a specific role. sections/projects.tex calls the
+% matching command via \IfRole{} guards.
+%
+% Crop Detection is shown for research-adjacent roles only:
+%   ML        → model development and evaluation angle
+%   Data      → pipeline and data processing angle
+%   Consulting → research insight and recommendation angle
+%
+% It is hidden for SDE, Backend, Frontend, FullStack, DevOps,
+% Quant, and Finance because a satellite imagery research
+% project carries no relevant signal for those role types.
+%
+% To update a bullet — edit the relevant command below.
+% To add a new role variant:
+%   1. Add \newcommand{\CropDetectionBulletXxx}{...} here
+%   2. Add \IfXxx{} block in sections/projects.tex
+% ============================================================
+
+
+% ============================================================
+% METADATA
+% Stores project info for potential future use.
+% Not rendered anywhere in the resume currently.
+% ============================================================
+\newcommand{\CropDetectionName}    {Crop Change Detection using Satellite Imagery}
+\newcommand{\CropDetectionDuration}{2025 -- Present}
+\newcommand{\CropDetectionPriority}{A}
+
+
+% ============================================================
+% ML — Machine Learning
+% Signals: PCANet model development, multi-temporal image
+% processing, feature engineering, and benchmark evaluation.
+% Strongest variant — leads with the model and methodology.
+% ============================================================
+\newcommand{\CropDetectionBulletML}{
+  \item Developed a crop change detection model using PCANet
+        for feature extraction from multi-temporal satellite
+        imagery.
+  \item Implemented preprocessing and feature engineering
+        techniques to improve land-cover change detection
+        accuracy.
+  \item Evaluated the proposed approach against traditional
+        image change detection methods using quantitative
+        accuracy metrics.
+  \item Processed high-resolution satellite datasets using
+        OpenCV and NumPy for model training and validation.
+}
+
+
+% ============================================================
+% Data — Data Engineering / Analytics
+% Signals: large-scale data pipeline design, automation,
+% efficient processing of multi-gigabyte datasets.
+% Leads with the pipeline and data engineering angle.
+% ============================================================
+\newcommand{\CropDetectionBulletData}{
+  \item Built preprocessing pipelines for large-scale
+        multi-temporal satellite image datasets.
+  \item Automated image normalization, alignment, and
+        feature extraction workflows using Python.
+  \item Processed multi-gigabyte satellite datasets
+        efficiently using OpenCV and NumPy.
+  \item Developed reusable data transformation pipelines
+        for reproducible computer vision experiments.
+}
+
+
+% ============================================================
+% Consulting — Business / Management Consulting
+% Signals: research methodology, comparative analysis,
+% insight generation, and performance evaluation.
+% Leads with the research and recommendation angle.
+% ============================================================
+% Renamed from \CropDetectionBulletResearch: the lookup now
+% keys strictly off \Role, and this variant is used for the
+% Consulting role, so it must be named ...Consulting to be
+% found. (Old code called this one manually, so the name
+% mismatch never surfaced before.)
+\newcommand{\CropDetectionBulletConsulting}{
+  \item Proposed a PCANet-based methodology for crop change
+        detection using multi-temporal satellite imagery.
+  \item Conducted comparative analysis against existing image
+        change detection approaches to validate the approach.
+  \item Evaluated model performance using quantitative
+        accuracy metrics and benchmark satellite datasets.
+  \item Improved detection robustness through enhanced
+        feature extraction and preprocessing techniques.
+}
+
+
+% ============================================================
+% NOTE ON MISSING ROLES
+% SDE, Backend, Frontend, FullStack, DevOps, Quant, Finance:
+% Crop Change Detection is a research and data science project.
+% It carries no relevant signal for web engineering, backend
+% APIs, infrastructure, algorithmic trading, or financial
+% analysis roles. Showing it for these roles would dilute
+% the resume rather than strengthen it.
+%
+% If the project evolves to include a web interface or API
+% (e.g. a REST API serving predictions), add:
+%   \newcommand{\CropDetectionBulletBackend}{...}
+% and wire it up in sections/projects.tex.
+% ============================================================
+
+% ============================================================
+% NEW ROLES — added in role expansion
+% ============================================================
+
+% Applied Scientist
+\newcommand{\CropDetectionBulletApplied}{
+  \item Developed a PCANet-based model for crop change
+        detection from multi-temporal satellite imagery.
+  \item Designed and implemented feature extraction pipelines
+        using OpenCV and NumPy for model training.
+  \item Evaluated model performance using quantitative
+        accuracy metrics against baseline approaches.
+  \item Processed large-scale satellite datasets and
+        applied preprocessing techniques to improve results.
+}
+
+% MLOps
+\newcommand{\CropDetectionBulletMLOps}{
+  \item Built reproducible data preprocessing and feature
+        extraction pipelines for satellite image datasets.
+  \item Automated image normalization and transformation
+        workflows using Python, OpenCV, and NumPy.
+  \item Structured experiment workflows for reproducible
+        model training and evaluation runs.
+}
+
+% Analytics
+\newcommand{\CropDetectionBulletAnalytics}{
+  \item Processed and analyzed multi-temporal satellite
+        imagery datasets to identify land-cover change trends.
+  \item Built data pipelines to automate preprocessing
+        and transformation of large geospatial datasets.
+  \item Evaluated detection accuracy using quantitative
+        metrics and visualized results with Matplotlib.
+}
+
+% PyDS — Python Data Scientist / AI Engineer
+\newcommand{\CropDetectionBulletPyDS}{
+  \item Developed a PCANet-based model for crop change
+        detection using multi-temporal satellite imagery,
+        implementing feature extraction pipelines and
+        evaluating model performance using quantitative
+        accuracy metrics and benchmark datasets.
+  \item Processed large-scale satellite datasets with
+        Python, OpenCV, and NumPy, building reproducible
+        preprocessing and transformation workflows suitable
+        for large-scale geospatial ML applications.
+}

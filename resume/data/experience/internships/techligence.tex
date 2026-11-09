@@ -1,0 +1,233 @@
+% ============================================================
+% data/experience/techligence.tex
+%
+% Defines all bullet point commands for the Techligence
+% Software Development Internship.
+%
+% Product:
+% LogicBlocks - Browser-based visual programming platform
+% inspired by Scratch/Blockly.
+%
+% Technologies:
+% React.js, Redux, Scratch GUI, Scratch VM,
+% Blockly, WaveSurfer.js, Web Audio API
+% ============================================================
+
+
+% ============================================================
+% METADATA
+% ============================================================
+\newcommand{\TechligenceName}    {Techligence}
+\newcommand{\TechligenceDuration}{Nov 2023 -- Feb 2024}
+\newcommand{\TechligenceLocation}{Mumbai, India}
+\newcommand{\TechligencePriority}{A}
+
+% ------------------------------------------------------------
+% FALLBACK ALIASES
+% No dedicated bullet set was ever written for these roles.
+% Aliased to the closest existing variant so they render real
+% content instead of falling through to the generic SDE
+% default. Write a bespoke variant here if you want different
+% framing for any of these specifically.
+% ------------------------------------------------------------
+\newcommand{\TechligenceML}      {\TechligenceAI}
+\newcommand{\TechligenceApplied} {\TechligenceAI}
+\newcommand{\TechligenceSRE}     {\TechligenceDevOps}
+\newcommand{\TechligenceMLOps}   {\TechligenceDevOps}
+\newcommand{\TechligenceCloud}   {\TechligenceDevOps}
+% Security has no close match among existing variants — left
+% undefined on purpose. \RoleContentOrDefault{Techligence}{SDE}
+% will fall back to \TechligenceSDE for it automatically.
+
+
+% ============================================================
+% SOFTWARE DEVELOPMENT ENGINEER
+% ============================================================
+\newcommand{\TechligenceSDE}{
+  \item Shipped production features for LogicBlocks — a
+        browser-based visual programming platform for K-12
+        students, built on React.js, Redux and a custom
+        Scratch VM fork.
+  \item Extended the Scratch VM runtime with custom block
+        execution logic, enabling proprietary Blockly blocks
+        to run with full JavaScript runtime behaviour.
+  \item Integrated WaveSurfer.js and the Web Audio API to
+        deliver waveform visualization, playback control,
+        audio trimming and block-synchronized audio within
+        the programming editor.
+}
+
+
+% ============================================================
+% FRONTEND
+% ============================================================
+\newcommand{\TechligenceFrontend}{
+  \item Built reusable React components powering LogicBlocks'
+        drag-and-drop visual programming environment for
+        K-12 students.
+  \item Extended the Scratch GUI editor — layouts, toolbox
+        categories and block palettes — to surface proprietary
+        programming capabilities to students.
+  \item Integrated WaveSurfer.js for responsive waveform
+        rendering and browser-based audio editing within the
+        programming editor.
+  \item Managed complex editor state using Redux and Redux
+        Thunk, minimizing unnecessary re-renders across the
+        multi-panel workspace.
+}
+
+
+% ============================================================
+% BACKEND
+% ============================================================
+\newcommand{\TechligenceBackend}{
+  \item Extended the Scratch VM runtime with custom block
+        opcodes and asynchronous event handlers, enabling
+        proprietary Blockly blocks to execute with full
+        JavaScript runtime behaviour.
+  \item Implemented execution flow control and async
+        scheduling within the VM to support time-sensitive
+        audio and interaction sequences.
+  \item Bridged browser-side APIs (Web Audio API) with the
+        custom VM execution pipeline, synchronizing visual
+        block execution with audio playback.
+}
+
+
+% ============================================================
+% FULL STACK
+% ============================================================
+\newcommand{\TechligenceFullStack}{
+  \item Developed full-stack functionality for LogicBlocks by
+        integrating Scratch GUI, Scratch VM and custom Blockly
+        extensions into a unified visual programming platform.
+  \item Designed reusable React components while extending
+        runtime execution logic through custom Scratch VM
+        implementations.
+  \item Built audio editing workflows by synchronizing
+        browser UI interactions with asynchronous Web Audio
+        API operations using Redux state management.
+  \item Improved maintainability by modularizing custom block
+        definitions, runtime handlers and frontend components
+        for scalable feature development.
+}
+
+% ============================================================
+% DATA ENGINEER
+% ============================================================
+\newcommand{\TechligenceData}{
+  \item Built data flows between Scratch GUI, Scratch VM and
+        Redux store to synchronize application state across
+        interactive programming sessions.
+  \item Managed complex application state involving sprites,
+        audio clips, editor workspace and project lifecycle
+        using Redux and Redux Thunk.
+  \item Designed reusable state management patterns enabling
+        predictable data flow between browser components and
+        runtime execution.
+  \item Optimized state updates to reduce unnecessary renders
+        while maintaining responsiveness across large visual
+        programming workspaces.
+}
+
+
+% ============================================================
+% AI / ML ENGINEER
+% ============================================================
+\newcommand{\TechligenceAI}{
+  \item Developed custom execution pipelines translating
+        Blockly blocks into executable JavaScript routines
+        through Scratch VM extensions.
+  \item Designed asynchronous execution workflows combining
+        browser events, runtime scheduling and audio
+        processing for interactive programming experiences.
+  \item Built extensible block execution architecture capable
+        of supporting domain-specific visual programming
+        features.
+  \item Worked across Scratch GUI and Scratch VM to bridge
+        high-level visual logic with low-level execution
+        behaviour.
+}
+
+
+% ============================================================
+% ANALYTICS
+% ============================================================
+\newcommand{\TechligenceAnalytics}{
+  \item Designed reusable application state architecture to
+        monitor editor interactions and synchronize user
+        actions across multiple UI components.
+  \item Improved responsiveness of the programming editor by
+        optimizing state updates and reducing unnecessary
+        rendering operations.
+  \item Built modular frontend components supporting
+        interactive user workflows across the visual
+        programming environment.
+  \item Collaborated with engineering teams to improve
+        usability and runtime consistency of the editor.
+}
+
+
+% ============================================================
+% CONSULTING
+% ============================================================
+\newcommand{\TechligenceConsulting}{
+  \item Collaborated with cross-functional engineering teams
+        to translate product requirements into scalable
+        frontend implementations.
+  \item Delivered reusable platform features improving the
+        usability and extensibility of the LogicBlocks
+        programming environment.
+  \item Worked closely with senior developers to integrate
+        custom runtime functionality into production systems.
+  \item Contributed to Agile development processes through
+        sprint planning, code reviews and iterative feature
+        delivery.
+}
+
+
+% ============================================================
+% DEVOPS
+% ============================================================
+\newcommand{\TechligenceDevOps}{
+  \item Worked within Git-based development workflows using
+        pull requests, code reviews and collaborative
+        software engineering practices.
+  \item Delivered modular frontend components supporting
+        maintainable feature development and deployment.
+  \item Collaborated across multiple application modules
+        while following production software development
+        workflows.
+}
+
+% ============================================================
+% NPCI — Lead Application Development
+% Frames Techligence work around runtime/execution engine
+% engineering — closest analogue to backend systems work.
+% ============================================================
+\newcommand{\TechligenceNPCI}{
+  \item Extended the Scratch VM runtime with custom block
+        opcodes and async event handlers, enabling proprietary
+        Blockly blocks to execute with full JavaScript runtime
+        behaviour on a production K-12 platform.
+  \item Integrated WaveSurfer.js and the Web Audio API to
+        deliver waveform visualization, playback control and
+        audio synchronization — bridging browser APIs with
+        the custom execution pipeline.
+}
+
+% ============================================================
+% PyDS — Python Data Scientist / AI Engineer
+% Frames Techligence work around execution pipeline
+% engineering and async/event-driven system design.
+% ============================================================
+\newcommand{\TechligencePyDS}{
+  \item Developed custom execution pipelines translating
+        Blockly block definitions into executable JavaScript
+        routines through Scratch VM extensions, building
+        expertise in pipeline design and runtime engineering.
+  \item Designed asynchronous workflows combining browser
+        events, execution scheduling and audio processing,
+        building systematic debugging and performance
+        analysis skills applicable to ML pipeline design.
+}

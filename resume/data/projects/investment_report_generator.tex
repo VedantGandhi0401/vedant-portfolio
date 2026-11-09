@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% data/projects/investment_report_generator.tex
+% Defines bullet variants for the Investment Research Report
+% Generator project, rendered in sections/projects.tex.
+%
+% Prefix: InvestmentReportGen -- variant names must be
+% \InvestmentReportGen<Role> exactly to be found by \RoleContent.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\InvestmentReportGenName}    {Investment Research Report Generator}
+\newcommand{\InvestmentReportGenDuration}{Jul 2025 - Dec 2025}
+\newcommand{\InvestmentReportGenStack}   {Python, FastAPI, LlamaIndex, Qdrant, Amazon Bedrock, AWS (S3, Lambda, API Gateway, DynamoDB)}
+\newcommand{\InvestmentReportGenPriority}{1}
+
+\newcommand{\InvestmentReportGenSDE}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes by building an end-to-end LLM pipeline
+that ingests annual reports, earnings call transcripts and
+historical financial data to auto-generate research reports
+and answer ad-hoc questions.
+\item Architected the full system solo: Next.js frontend,
+FastAPI backend, Amazon Bedrock for generation, and
+Lambda/API Gateway/S3/DynamoDB for a serverless serving layer.
+}
+
+\newcommand{\InvestmentReportGenBackend}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes via a FastAPI backend serving an
+LLM pipeline over annual reports, concall transcripts and
+historical financial data.
+\item Designed a serverless AWS serving layer (Lambda, API
+Gateway, DynamoDB, S3) with Amazon Bedrock for generation,
+enabling scalable on-demand report creation.
+}
+
+\newcommand{\InvestmentReportGenFullStack}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes by building a full-stack LLM platform
+(Next.js + FastAPI) that ingests annual reports, concalls
+and financial data to auto-generate research reports.
+\item Solo-owned the entire stack: frontend, backend and
+AWS infrastructure (Bedrock, S3, Lambda, API Gateway,
+DynamoDB) — no external collaborators.
+}
+
+\newcommand{\InvestmentReportGenML}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes by building an LLM pipeline (Amazon
+Bedrock) that ingests and reasons over annual reports,
+concall transcripts and historical financial data.
+\item Designed the retrieval and prompting flow to support
+both structured report generation and ad-hoc research
+Q\&A from the same document corpus.
+}
+
+\newcommand{\InvestmentReportGenApplied}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes — a measurable production impact —
+by applying Amazon Bedrock to automate research synthesis
+over annual reports, concalls and historical financial data.
+\item Solo-built the retrieval and generation pipeline plus
+a full Next.js/FastAPI product around it, owning every
+layer from document ingestion to UI.
+}
+
+\newcommand{\InvestmentReportGenData}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes by building a data ingestion pipeline
+over annual reports, concall transcripts and historical
+financial records, feeding an LLM generation layer
+(Amazon Bedrock).
+\item Designed the AWS data flow (S3 → Lambda → DynamoDB)
+powering document retrieval for both report generation
+and ad-hoc research Q\&A.
+}
+
+\newcommand{\InvestmentReportGenAnalytics}{
+\item Built an LLM-powered pipeline that turns annual reports,
+concalls, and historical financial data into analyst-ready
+reports and direct answers to research questions.
+\item Solo-owned the system end-to-end (Next.js, FastAPI, AWS
+Bedrock/Lambda/DynamoDB).
+\item Reduced analyst report-generation time from 2--3 days to
+under 30 minutes, a measurable analyst-productivity gain.
+}
+
+\newcommand{\InvestmentReportGenFinance}{
+\item Built an LLM-powered investment research tool that
+ingests annual reports, earnings call transcripts, and
+historical financial data to generate analyst reports and
+answer research questions on demand.
+\item Solo-designed the full pipeline (Next.js, FastAPI, Amazon
+Bedrock, AWS serverless infrastructure).
+\item Reduced analyst report-generation time from 2--3 days to
+under 30 minutes.
+}
+
+\newcommand{\InvestmentReportGenQuant}{
+\item Built a research-acceleration tool that ingests annual
+reports, concalls, and historical financial data, using an LLM
+(Amazon Bedrock) to generate reports and answer research
+questions.
+\item Solo-built the pipeline end-to-end on Next.js, FastAPI,
+and AWS serverless infrastructure.
+\item Reduced analyst report-generation time from 2--3 days to
+under 30 minutes.
+}
+
+\newcommand{\InvestmentReportGenQuantResearch}{
+\item Built an LLM-powered pipeline (Amazon Bedrock) that
+synthesizes annual reports, earnings call transcripts, and
+historical financial data into research reports and direct
+answers to ad-hoc questions.
+\item Solo-designed the retrieval and generation architecture
+end-to-end.
+\item Reduced analyst report turnaround from 2--3 days to under
+30 minutes.
+}
+
+\newcommand{\InvestmentReportGenQuantTrader}{
+\item Built a research tool that condenses annual reports,
+concalls, and historical financial data into fast, on-demand
+analyst reports and answers -- using an LLM (Amazon Bedrock).
+\item Solo-built the full stack: Next.js frontend, FastAPI
+backend, AWS serverless infrastructure.
+\item Cut research turnaround from 2--3 days to under 30
+minutes, materially faster time-to-signal.
+}
+
+\newcommand{\InvestmentReportGenConsulting}{
+\item Built an LLM-powered platform that generates investment
+research reports and answers ad-hoc questions from annual
+reports, earnings calls, and historical financial data.
+\item Solo-owned the client-facing product end-to-end (Next.js,
+FastAPI, AWS).
+\item Reduced report-generation turnaround from 2--3 days to
+under 30 minutes -- a direct productivity/delivery-speed story.
+}
+
+\newcommand{\InvestmentReportGenNPCI}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes by building an end-to-end LLM pipeline
+(Amazon Bedrock, LlamaIndex, Qdrant) that ingests annual
+reports, concall transcripts and financial data to
+auto-generate research reports and answer ad-hoc questions.
+\item Architected the full system solo on FastAPI and a
+serverless AWS stack (Lambda, API Gateway, S3, DynamoDB),
+applying Redis caching and metadata-based access control
+to ensure performant and secure document retrieval.
+}
+
+\newcommand{\InvestmentReportGenPyDS}{
+\item Cut analyst report-generation time from 2--3 days
+to under 30 minutes by building an end-to-end LLM pipeline
+(Amazon Bedrock, LlamaIndex, Qdrant vector database) that
+ingests annual reports, earnings call transcripts, and
+historical financial data to auto-generate research reports
+and answer ad-hoc research questions.
+\item Designed the RAG retrieval and prompting architecture
+end-to-end: document ingestion, chunking, vector indexing,
+reranking, and LLM generation — supporting both structured
+report output and free-form Q\&A over the same corpus.
+\item Solo-built the full production system on FastAPI and
+a serverless AWS stack (Bedrock, Lambda, API Gateway, S3,
+DynamoDB), handling data pipeline, model serving, and API
+design.
+}

@@ -1,0 +1,196 @@
+% ============================================================
+% data/achievements.tex
+% Defines all achievement commands used in
+% sections/achievements.tex.
+%
+% HOW IT WORKS:
+% Each \newcommand defines one achievement bullet.
+% \Achievement{} wraps the text in an \item so it renders
+% as a bullet point inside \begin{ResumeItemize}.
+%
+% To add a new achievement:
+%   1. Define a \newcommand{\YourAchievement} below
+%   2. Add \YourAchievement inside the relevant \IfRole{}
+%      blocks in sections/achievements.tex
+%
+% IMPORTANT: Always escape & as \& inside command definitions.
+% Raw & is a LaTeX table column separator and will cause a
+% "misplaced alignment tab" compile error if unescaped.
+% ============================================================
+
+
+% ============================================================
+% COMPETITIVE PROGRAMMING
+% ============================================================
+
+% ------------------------------------------------------------
+% \LeetCode
+% Replace 700+ with your actual solved count.
+% \& is used instead of & to avoid a compile error.
+% ------------------------------------------------------------
+\newcommand{\LeetCode}{
+  \Achievement{
+    Solved 700+ Data Structures \& Algorithms problems
+    across LeetCode, Codeforces, and CodeChef.
+  }
+}
+
+% ------------------------------------------------------------
+% \Codeforces
+% NOW wired into \IfSDE in sections/achievements.tex.
+% Replace XXXX below with your real max rating before
+% compiling. Codeforces ranks for reference:
+%   Newbie, Pupil, Specialist, Expert,
+%   Candidate Master, Master, International Master, Grandmaster
+% ------------------------------------------------------------
+\newcommand{\Codeforces}{
+  \Achievement{
+    Codeforces Specialist (Max Rating: XXXX).
+  }
+}
+
+% ------------------------------------------------------------
+% \CodeChef
+% NOT currently called from sections/achievements.tex -- same
+% status as \Codeforces above. Fill in your real rating and
+% star count, then wire it in when ready.
+% ------------------------------------------------------------
+\newcommand{\CodeChef}{
+  \Achievement{
+    CodeChef ★★★ (Max Rating: XXXX).
+  }
+}
+
+
+% ============================================================
+% ACADEMICS
+% ============================================================
+
+% ------------------------------------------------------------
+% \CGPAAchievement
+% Replace 9.XX with your actual CGPA (e.g. 9.12).
+% Used for Quant, Finance, and Consulting roles where
+% academic performance is a strong signal.
+% ------------------------------------------------------------
+\newcommand{\CGPAAchievement}{
+  \Achievement{
+    Maintained a CGPA of 7.55/10 at VJTI.
+  }
+}
+
+
+% ============================================================
+% RESEARCH
+% ============================================================
+
+% ------------------------------------------------------------
+% \ResearchPaper
+% Update this if your paper gets published — add the
+% conference/journal name and year for stronger credibility.
+% ------------------------------------------------------------
+\newcommand{\ResearchPaper}{
+  \Achievement{
+    Developed a novel PCANet-based crop change detection
+    methodology using multi-temporal satellite imagery.
+  }
+}
+
+
+% ============================================================
+% HACKATHONS
+% ============================================================
+
+% ------------------------------------------------------------
+% \Hackathon
+% NOT currently called from sections/achievements.tex --
+% "participated, no placement yet" reads as filler in an
+% Achievements section, so it's dormant for now. If a specific
+% hackathon produced something worth showing (a real build, a
+% novel approach, a track win), that's stronger as a Projects
+% entry than a line here. Revive this once you have a genuine
+% placement (e.g. "Finalist at Smart India Hackathon 2024").
+% ------------------------------------------------------------
+\newcommand{\Hackathon}{
+  \Achievement{
+    Participated in national-level hackathons and developed
+    end-to-end software solutions under time constraints.
+  }
+}
+
+
+% ============================================================
+% CERTIFICATIONS
+% ============================================================
+
+% ------------------------------------------------------------
+% \AWS
+% Replace with your actual certification name and year.
+% e.g. "AWS Certified Cloud Practitioner (2024)"
+% ------------------------------------------------------------
+\newcommand{\AWS}{
+  \Achievement{
+    AWS Certified Cloud Practitioner (2024).
+  }
+}
+
+% ------------------------------------------------------------
+% \GoogleML
+% Replace with your actual course/specialization name.
+% e.g. "Google Machine Learning Crash Course (2024)"
+% ------------------------------------------------------------
+\newcommand{\GoogleML}{
+  \Achievement{
+    Completed Google Machine Learning Crash Course (2024).
+  }
+}
+
+
+% ============================================================
+% LEADERSHIP
+% This generic one-line achievement is retired now that real
+% leadership content lives in sections/leadership.tex (Pratibimb
+% + Community of Coders). Kept here, commented out, only as a
+% record of the old placeholder -- do not re-enable it.
+% ============================================================
+
+% \newcommand{\Leadership}{
+%   \Achievement{
+%     Led student teams in academic and technical projects
+%     at VJTI.
+%   }
+% }
+
+
+% ============================================================
+% OPEN SOURCE
+% ============================================================
+
+% ------------------------------------------------------------
+% \OpenSource
+% NOT currently called from sections/achievements.tex -- no
+% real open-source project yet. Fill in the repo/project name
+% below once you have one, then wire it into the relevant
+% \IfRole{} blocks in sections/achievements.tex.
+% ------------------------------------------------------------
+\newcommand{\OpenSource}{
+  \Achievement{
+    Contributed to open-source projects on GitHub.
+  }
+}
+
+
+% ============================================================
+% GENERAL
+% ============================================================
+
+% ------------------------------------------------------------
+% \FastLearner
+% Currently unused in sections/achievements.tex.
+% Add it to a \IfRole{} block there if needed.
+% ------------------------------------------------------------
+\newcommand{\FastLearner}{
+  \Achievement{
+    Quickly adapted to new technologies and production
+    software development during internship at Wizzer.
+  }
+}

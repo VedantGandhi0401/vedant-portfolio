@@ -1,0 +1,55 @@
+% ============================================================
+% sections/header.tex
+% Renders your name and contact info at the top of the resume.
+% This section is NOT role-specific — it always looks the same
+% regardless of what \Role is set to in config.tex.
+%
+% To update your details, just edit the values directly below.
+% ============================================================
+
+
+% ------------------------------------------------------------
+% \ResumeName{} — defined in settings.tex
+% Renders your full name centered in huge bold text.
+% Replace VEDANT GANDHI with your own name in ALL CAPS.
+% ------------------------------------------------------------
+\ResumeName{VEDANT GANDHI}
+
+
+% ------------------------------------------------------------
+% \ResumeContact{} — defined in settings.tex
+% Everything inside the braces is centered on one line.
+%
+% Each contact item follows this pattern:
+%   icon  \hspace{2pt}  value  \hspace{8pt} $\diamond$ \hspace{8pt}
+%
+% \faXxx        → FontAwesome icon (from fontawesome package)
+% \hspace{2pt}  → 2pt gap between icon and text
+% \hspace{8pt}  → 8pt gap on each side of the diamond separator
+% $\diamond$    → diamond bullet used as a visual separator
+% \href{url}{display text} → clickable hyperlink in the PDF
+% ------------------------------------------------------------
+\ResumeContact{
+
+  % Each item is wrapped in \mbox{} to prevent line breaks mid-item.
+  % \hspace{6pt}$\vert$\hspace{6pt} is used as a separator.
+
+  % --- Location ---
+  \mbox{\faMapMarker\hspace{2pt}Mumbai}
+  \hspace{6pt}$|$\hspace{6pt}
+  % --- Phone ---
+  \mbox{\faPhone\hspace{2pt}+91 93223 18219}
+  \hspace{6pt}$|$\hspace{6pt}
+  % --- Email ---
+  \mbox{\faEnvelope\hspace{2pt}\href{mailto:vagandhi04@gmail.com}{vagandhi04@gmail.com}}
+  \hspace{6pt}$|$\hspace{6pt}
+  % --- LinkedIn ---
+  \mbox{\faLinkedinSquare\hspace{2pt}\href{https://www.linkedin.com/in/vedant-gandhi-496308229/}{www.linkedin.com/in/vedant-gandhi-496308229}}
+  \hspace{6pt}$|$\hspace{6pt}
+  % --- GitHub ---
+  \mbox{\faGithub\hspace{2pt}\href{https://github.com/VedantGandhi04}{github.com/VedantGandhi04}}
+  \hspace{6pt}$|$\hspace{6pt}
+  % --- Portfolio ---
+  \mbox{\faGlobe\hspace{2pt}\href{https://vedant-portfolio-orpin.vercel.app/}{Portfolio}}
+
+}

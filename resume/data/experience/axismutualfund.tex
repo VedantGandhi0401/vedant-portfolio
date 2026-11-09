@@ -1,0 +1,277 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% data/experience/axismutualfund.tex
+% Defines all bullet point commands for the Axis Mutual Fund
+% FTE entry rendered in sections/experience.tex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ============================================================
+% METADATA
+% ============================================================
+\newcommand{\AxisMFName}    {Axis Mutual Fund}
+\newcommand{\AxisMFDuration}{Jun 2025 -- Present}
+\newcommand{\AxisMFLocation}{Mumbai, India}
+\newcommand{\AxisMFPriority}{A}
+
+% ------------------------------------------------------------
+% ROLE-SPECIFIC JOB TITLES
+% Looked up via \RoleTitle{AxisMF}{default title} in
+% sections/experience.tex. Any \Role not listed here falls
+% back to the default title passed at the call site
+% ("Software Development Engineer").
+% ------------------------------------------------------------
+\newcommand{\AxisMFTitleData}          {Data Engineer}
+\newcommand{\AxisMFTitleFinance}       {Financial Technology Engineer}
+\newcommand{\AxisMFTitleConsulting}    {Technology Consultant}
+\newcommand{\AxisMFTitleSRE}           {Site Reliability Engineer}
+\newcommand{\AxisMFTitleMLOps}         {MLOps Engineer}
+\newcommand{\AxisMFTitleCloud}         {Cloud Engineer}
+\newcommand{\AxisMFTitleSecurity}      {Security Engineer}
+\newcommand{\AxisMFTitleApplied}       {Applied Scientist}
+\newcommand{\AxisMFTitleQuantResearch} {Quantitative Researcher}
+\newcommand{\AxisMFTitleQuantTrader}   {Quantitative Trader}
+\newcommand{\AxisMFTitleAnalytics}     {Analytics Engineer}
+
+% ============================================================
+% SDE — Software Development Engineer
+% ============================================================
+\newcommand{\AxisMFSDE}{
+\item Improved Lighthouse performance scores from 20--30
+to 70--80 across Axis Mutual Fund's investor-facing
+platforms by applying SSR, Critical CSS, dynamic imports,
+lazy loading and Akamai CDN caching.
+\item Built the Goal Planning module end-to-end by
+integrating KFintech APIs and internal services, enabling
+investors to set savings targets and track projected
+returns across SIP and Lump Sum investments.
+\item Decoupled the Add-to-Cart investment journey from
+the QuickPay flow, eliminating cross-feature dependencies
+and enabling both flows to be developed and released
+independently.
+\item Shipped production features across B2B and B2C
+investment platforms using Next.js, React.js and
+Spring Boot APIs.
+}
+
+% ============================================================
+% DATA — Data Engineering / Analytics
+% ============================================================
+\newcommand{\AxisMFData}{
+\item Instrumented 200+ GA4 and Google Tag Manager events
+across Add-to-Cart, QuickPay, STP, SWP, Redeem, Insta
+Redeem and Login journeys to expose user drop-off points
+in the investment funnel.
+\item Translated business analytics requirements directly
+into production tracking implementations, enabling
+stakeholders to measure funnel conversion without
+engineering intervention for each new query.
+\item Integrated event pipelines into live investment
+workflows, feeding business reporting and customer
+journey analysis across B2B and B2C platforms.
+}
+
+% ============================================================
+% Finance — Investment / Financial Technology
+% ============================================================
+\newcommand{\AxisMFFinance}{
+\item Built the Goal Planning module end-to-end by
+integrating KFintech APIs and internal services, enabling
+investors to set savings targets and track projected
+returns across SIP and Lump Sum products.
+\item Refactored Annualized Returns and Benchmark Returns
+APIs powering performance display across multiple
+investor-facing workflows.
+\item Enforced business validation rules for financial
+products including minimum SIP constraints and
+transaction eligibility checks at the API boundary.
+\item Shipped production features for B2C and B2B wealth
+management platforms supporting long-term financial
+goal planning.
+}
+
+% ============================================================
+% Consulting — Technology / Business Consulting
+% ============================================================
+\newcommand{\AxisMFConsulting}{
+\item Worked directly with Product Managers during Vision
+Document and Functional Requirement discussions to
+translate business needs into production features.
+\item Partnered with Business teams to design analytics
+strategies enabling customer funnel analysis and
+lead conversion tracking.
+\item Coordinated closely with QA teams during sprint
+execution and production release cycles to ensure
+successful feature delivery.
+\item Delivered reusable CMS-driven solutions allowing
+business teams to manage dynamic content without
+engineering intervention.
+}
+
+% ============================================================
+% SRE
+% ============================================================
+\newcommand{\AxisMFSRE}{
+\item Improved production reliability by optimizing
+frontend rendering, bundle loading and caching
+strategies across investor-facing applications.
+\item Implemented SSR, lazy loading and Akamai CDN caching
+to improve application responsiveness and reduce
+page load latency.
+\item Worked within CI/CD release workflows alongside QA
+and engineering teams for reliable production
+deployments.
+}
+
+% ============================================================
+% MLOps
+% ============================================================
+\newcommand{\AxisMFMLOps}{
+\item Built an enterprise RAG platform that lets investment
+analysts query proprietary research documents and auto-
+generate reports using LlamaIndex, GPT-4o/Claude,
+Qdrant vector search and Redis.
+\item Applied metadata-based access control and reranking
+to ensure retrieval never surfaced confidential documents
+to unauthorized analysts.
+\item Cut analyst report-generation time significantly by
+replacing manual document trawling with a structured
+LLM retrieval and generation pipeline.
+}
+
+% ============================================================
+% Cloud
+% ============================================================
+\newcommand{\AxisMFCloud}{
+\item Collaborated with cloud and infrastructure teams
+while implementing Akamai CDN caching strategies for
+production applications.
+\item Optimized downstream caching and frontend delivery
+using CDN configuration and rendering strategies.
+\item Worked within production deployment pipelines and
+CI/CD workflows to deliver customer-facing features.
+}
+
+% ============================================================
+% Security
+% ============================================================
+\newcommand{\AxisMFSecurity}{
+\item Built an enterprise RAG platform with metadata-based
+access control, ensuring proprietary analyst documents
+were never exposed to external language models or
+unauthorized users.
+\item Designed document retrieval workflows that isolate
+confidential research content at the retrieval layer,
+not just the application layer.
+\item Shipped secure API integrations across production
+investment workflows within a regulated financial
+services environment.
+}
+
+% ============================================================
+% Applied Scientist
+% ============================================================
+\newcommand{\AxisMFApplied}{
+\item Built an enterprise document intelligence platform
+using RAG to automate investment research summarization
+over proprietary financial documents.
+\item Integrated GPT-4o/Claude, LlamaIndex and Qdrant
+vector search to enable analysts to query and synthesize
+information from large unstructured document corpora.
+\item Applied reranking and metadata filtering to improve
+retrieval precision while enforcing strict data isolation
+between analyst tiers.
+}
+
+% ============================================================
+% Quant Research
+% ============================================================
+\newcommand{\AxisMFQuantResearch}{
+\item Developed production investment workflows involving
+Annualized Returns and Benchmark Returns APIs used
+across investor platforms.
+\item Built Goal Planning features enabling financial
+projection through SIP and Lump Sum investments.
+\item Worked with business rules governing investment
+eligibility, financial products and transaction
+validation.
+}
+
+% ============================================================
+% Quant Trader
+% ============================================================
+\newcommand{\AxisMFQuantTrader}{
+\item Integrated production financial APIs supporting
+investment performance and benchmark comparison
+across customer-facing platforms.
+\item Implemented business logic for SIP investments,
+Lump Sum transactions and investor goal tracking.
+\item Collaborated on investment platform development
+within a regulated financial services ecosystem.
+}
+
+% ============================================================
+% Analytics
+% ============================================================
+\newcommand{\AxisMFAnalytics}{
+\item Instrumented 200+ GA4 and Google Tag Manager events
+across investor journeys, giving business stakeholders
+direct visibility into conversion funnels without
+requiring per-query engineering work.
+\item Built user journey tracking across Add-to-Cart,
+QuickPay, STP, SWP, Redeem and Login flows to pinpoint
+drop-off points and inform product decisions.
+\item Owned the analytics implementation end-to-end from
+requirements with Product and Business teams through
+to production event firing and validation.
+}
+
+% ============================================================
+% NPCI — Lead Application Development
+% Frames Axis MF work around Java/Spring Boot backend
+% engineering, production systems, fintech domain, and AI.
+% Matches NPCI JD emphasis on enterprise Java, payments
+% domain, production support, Redis, CI/CD, and LLM/AI.
+% ============================================================
+\newcommand{\AxisMFNPCI}{
+\item Engineered production Java/Spring Boot APIs powering
+investor-facing wealth management features across SIP,
+Lump Sum and Goal Planning workflows on a regulated
+fintech platform at scale.
+\item Improved Lighthouse scores from 20--30 to 70--80 by
+applying SSR, Critical CSS, Akamai CDN caching and lazy
+loading — diagnosing and resolving production performance
+bottlenecks across B2B and B2C investment platforms.
+\item Built an enterprise RAG platform (LlamaIndex,
+GPT-4o/Claude, Qdrant, Redis) enabling investment analysts
+to securely query proprietary research documents, with
+metadata-based access control preventing document leakage.
+\item Collaborated directly with Product, QA, and Business
+teams across sprint planning and production release cycles
+to deliver financial features in an Agile environment.
+}
+\newcommand{\AxisMFTitleNPCI}{Software Development Engineer}
+
+% ============================================================
+% PyDS — Python Data Scientist / AI Engineer
+% Frames Axis MF work around LLM/RAG pipeline engineering,
+% behavioral analytics, and applied AI in a regulated
+% financial services domain.
+% ============================================================
+\newcommand{\AxisMFPyDS}{
+\item Built an enterprise RAG platform (LlamaIndex,
+GPT-4o/Claude, Qdrant, Redis) enabling investment analysts
+to query and synthesize proprietary research documents,
+with metadata-based access control and reranking to
+improve retrieval precision.
+\item Instrumented 200+ GA4 and Google Tag Manager events
+across investor journeys, applying behavioral analytics
+to expose funnel drop-off patterns and inform product
+decisions directly from data.
+\item Designed and deployed LLM-powered document intelligence
+pipelines over large unstructured financial corpora,
+cutting analyst research turnaround from days to minutes.
+\item Collaborated with Product and Business stakeholders to
+translate analytical requirements into production
+implementations, operating end-to-end from data
+instrumentation to model serving.
+}
+\newcommand{\AxisMFTitlePyDS}{Data Scientist}

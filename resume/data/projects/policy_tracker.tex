@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% data/projects/policy_tracker.tex
+% Defines bullet variants for the Policy Tracker project
+% (IN PROGRESS), rendered in sections/projects.tex.
+%
+% Prefix: PolicyTracker -- variant names must be
+% \PolicyTracker<Role> exactly to be found by \RoleContent.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\PolicyTrackerName}    {Policy Tracker (In Progress)}
+\newcommand{\PolicyTrackerDuration}{2026 -- Present}
+\newcommand{\PolicyTrackerStack}   {Apify, Chromium, AWS IAM}
+\newcommand{\PolicyTrackerPriority}{7}
+
+\newcommand{\PolicyTrackerSDE}{
+\item Building a solo monitoring platform that scrapes and
+tracks government policy and regulatory changes published
+online, alerting users when tracked sources update.
+\item Implemented the scraping pipeline (Apify + headless
+Chromium), user authentication/authorization, and a
+notification system.
+}
+
+\newcommand{\PolicyTrackerBackend}{
+\item Building a backend for tracking government policy and
+regulatory changes published online, using Apify and headless
+Chromium for scraping.
+\item Implemented authentication/authorization (AWS IAM), user
+journeys, and a notification pipeline; scraping and alerting
+core is functional, platform is still in active development.
+}
+
+\newcommand{\PolicyTrackerDevOps}{
+\item Building the scraping and monitoring infrastructure for a
+policy-tracking platform (Apify, headless Chromium), including
+IAM-based access control.
+\item Solo-implemented the notification pipeline and user
+auth/journey flows; infrastructure and deployment work ongoing.
+}
+
+\newcommand{\PolicyTrackerSRE}{
+\item Building a monitoring platform that continuously scrapes
+government policy and regulatory sources (Apify + headless
+Chromium) and alerts users on changes.
+\item Implemented the notification system, auth (AWS IAM), and
+user journeys as a solo project; reliability/observability work
+ongoing.
+}
+
+\newcommand{\PolicyTrackerData}{
+\item Building a data pipeline that scrapes and tracks
+government policy and regulatory changes from online sources
+(Apify + headless Chromium).
+\item Implemented data ingestion, auth (AWS IAM), and a
+notification layer alerting users to tracked changes; solo
+project, in active development.
+}
+
+\newcommand{\PolicyTrackerConsulting}{
+\item Building a platform that tracks government policy and
+regulatory changes across online sources, alerting subscribed
+users automatically.
+\item Solo-implemented the scraping pipeline, authentication,
+and notification system; in active development.
+}
+
+\newcommand{\PolicyTrackerAnalytics}{
+\item Building a platform that scrapes and tracks government
+policy and regulatory changes published online (Apify +
+headless Chromium), alerting users to relevant updates.
+\item Solo-implemented ingestion, auth (AWS IAM), and
+notifications; in active development.
+}

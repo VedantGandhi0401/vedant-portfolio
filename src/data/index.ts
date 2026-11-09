@@ -52,7 +52,7 @@ export const dataScientistProfile: ProfileData = {
   tagline: "Data Scientist building LLM pipelines and AI-powered applications.",
   description:
     "Data scientist and ML engineer with a focus on Generative AI, retrieval-augmented generation, and deep learning. Currently at Axis Mutual Fund, building enterprise RAG platforms and LLM-powered document intelligence pipelines for investment research.",
-  resumePdf: "/resumeV8.pdf",
+  resumePdf: "/resume-pyds.pdf",
   about:
     "I'm a data scientist and ML engineer with a B.Tech in Information Technology from VJTI, Mumbai. I specialise in Generative AI, retrieval-augmented generation, and deep learning — with hands-on experience building RAG platforms, LLM-powered document intelligence pipelines, and computer vision systems. Currently at Axis Mutual Fund, I build enterprise AI tooling that turns large unstructured financial corpora into actionable analyst intelligence, and instrument behavioral analytics to drive data-informed product decisions.",
   experiences: [
@@ -135,7 +135,7 @@ export const softwareEngineerProfile: ProfileData = {
   tagline: "Software Engineer building scalable backend systems and AI-powered applications.",
   description:
     "Software engineer experienced in Java/Spring Boot, cloud-native architecture, and Generative AI. Currently at Axis Mutual Fund, shipping production APIs for investor-facing wealth management features and building enterprise RAG pipelines for investment research.",
-  resumePdf: "/resumeV7.pdf",
+  resumePdf: "/resume-npci.pdf",
   about:
     "I'm a software engineer with a B.Tech in Information Technology from VJTI, Mumbai. I build scalable backend systems and AI-powered applications, with a focus on Java/Spring Boot, cloud-native architecture, and retrieval-augmented generation. Currently at Axis Mutual Fund, I ship production Java APIs powering investor-facing wealth management features, drive performance improvements across B2B and B2C investment platforms, and build enterprise RAG pipelines that put proprietary research in analysts' hands in seconds.",
   experiences: [
