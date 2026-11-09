@@ -58,7 +58,7 @@ export const dataScientistProfile: ProfileData = {
   experiences: [
     {
       company: "Axis Mutual Fund",
-      role: "Data Scientist",
+      role: "Software Development Engineer",
       period: "Jun 2025 – Present",
       location: "Mumbai, India",
       bullets: [
