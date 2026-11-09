@@ -48,13 +48,13 @@ export type ProfileData = {
 // ─── Data Scientist profile ───────────────────────────────────────────────────
 
 export const dataScientistProfile: ProfileData = {
-  role: "Data Scientist",
-  tagline: "Data Scientist building LLM pipelines and AI-powered applications.",
+  role: "Software Development Engineer",
+  tagline: "Software Engineer building LLM pipelines and AI-powered applications.",
   description:
-    "Data scientist and ML engineer with a focus on Generative AI, retrieval-augmented generation, and deep learning. Currently at Axis Mutual Fund, building enterprise RAG platforms and LLM-powered document intelligence pipelines for investment research.",
+    "Software engineer with a focus on Generative AI, retrieval-augmented generation, and deep learning. Currently at Axis Mutual Fund, building enterprise RAG platforms and LLM-powered document intelligence pipelines for investment research.",
   resumePdf: "/resume-pyds.pdf",
   about:
-    "I'm a data scientist and ML engineer with a B.Tech in Information Technology from VJTI, Mumbai. I specialize in Generative AI, retrieval-augmented generation, and deep learning — with hands-on experience building RAG platforms, LLM-powered document intelligence pipelines, and computer vision systems. Currently at Axis Mutual Fund, I build enterprise AI tooling that turns large unstructured financial corpora into actionable analyst intelligence, and instrument behavioral analytics to drive data-informed product decisions.",
+    "I'm a software engineer with a B.Tech in Information Technology from VJTI, Mumbai. I specialize in Generative AI, retrieval-augmented generation, and deep learning — with hands-on experience building RAG platforms, LLM-powered document intelligence pipelines, and computer vision systems. Currently at Axis Mutual Fund, I build enterprise AI tooling that turns large unstructured financial corpora into actionable analyst intelligence, and instrument behavioral analytics to drive data-informed product decisions.",
   experiences: [
     {
       company: "Axis Mutual Fund",
