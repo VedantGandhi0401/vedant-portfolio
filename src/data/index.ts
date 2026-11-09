@@ -63,7 +63,7 @@ export const dataScientistProfile: ProfileData = {
       location: "Mumbai, India",
       bullets: [
         "Built an enterprise RAG platform (LlamaIndex, GPT-4o/Claude, Qdrant, Redis) enabling investment analysts to query and synthesize proprietary research documents, with metadata-based access control and reranking to improve retrieval precision.",
-        "Instrumented 200+ GA4 and Google Tag Manaby ger events across investor journeys, applying behavioral analytics to expose funnel drop-off patterns and inform product decisions directly from data.",
+        "Instrumented 200+ GA4 and Google Tag Manager events across investor journeys, applying behavioral analytics to expose funnel drop-off patterns and inform product decisions directly from data.",
         "Designed and deployed LLM-powered document intelligence pipelines over large unstructured financial corpora, cutting analyst research turnaround from days to minutes.",
         "Collaborated with Product and Business stakeholders to translate analytical requirements into production implementations, operating end-to-end from data instrumentation to model serving.",
       ],
