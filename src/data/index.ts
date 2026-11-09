@@ -54,7 +54,7 @@ export const dataScientistProfile: ProfileData = {
     "Data scientist and ML engineer with a focus on Generative AI, retrieval-augmented generation, and deep learning. Currently at Axis Mutual Fund, building enterprise RAG platforms and LLM-powered document intelligence pipelines for investment research.",
   resumePdf: "/resume-pyds.pdf",
   about:
-    "I'm a data scientist and ML engineer with a B.Tech in Information Technology from VJTI, Mumbai. I specialise in Generative AI, retrieval-augmented generation, and deep learning — with hands-on experience building RAG platforms, LLM-powered document intelligence pipelines, and computer vision systems. Currently at Axis Mutual Fund, I build enterprise AI tooling that turns large unstructured financial corpora into actionable analyst intelligence, and instrument behavioral analytics to drive data-informed product decisions.",
+    "I'm a data scientist and ML engineer with a B.Tech in Information Technology from VJTI, Mumbai. I specialize in Generative AI, retrieval-augmented generation, and deep learning — with hands-on experience building RAG platforms, LLM-powered document intelligence pipelines, and computer vision systems. Currently at Axis Mutual Fund, I build enterprise AI tooling that turns large unstructured financial corpora into actionable analyst intelligence, and instrument behavioral analytics to drive data-informed product decisions.",
   experiences: [
     {
       company: "Axis Mutual Fund",
@@ -64,7 +64,7 @@ export const dataScientistProfile: ProfileData = {
       bullets: [
         "Built an enterprise RAG platform (LlamaIndex, GPT-4o/Claude, Qdrant, Redis) enabling investment analysts to query and synthesize proprietary research documents, with metadata-based access control and reranking to improve retrieval precision.",
         "Instrumented 200+ GA4 and Google Tag Manager events across investor journeys, applying behavioral analytics to expose funnel drop-off patterns and inform product decisions directly from data.",
-        "Designed and deployed LLM-powered document intelligence pipelines over large unstructured financial corpora, cutting analyst research turnaround from days to minutes.",
+        "Designed and deployed LLM-powered document intelligence pipelines over large unstructured financial corpora, cutting analyst research turnaround time from days to minutes.",
         "Collaborated with Product and Business stakeholders to translate analytical requirements into production implementations, operating end-to-end from data instrumentation to model serving.",
       ],
     },
@@ -73,7 +73,7 @@ export const dataScientistProfile: ProfileData = {
     {
       title: "Investment Research Report Generator",
       description:
-        "Cut analyst report-generation time from 2–3 days to under 30 minutes by building an end-to-end LLM pipeline (Amazon Bedrock, LlamaIndex, Qdrant) that ingests annual reports, earnings call transcripts, and financial data to auto-generate research reports and answer ad-hoc questions. Designed the RAG architecture end-to-end — document ingestion, chunking, vector indexing, reranking, and LLM generation — supporting structured report output and free-form Q&A over the same corpus. Solo-built on FastAPI and a serverless AWS stack.",
+        "Cut analyst report-generation time from 2–3 days to under 30 minutes by building an end-to-end LLM pipeline (Amazon Bedrock, LlamaIndex, Qdrant) that ingests annual reports, earnings call transcripts, and financial data to auto-generate research reports and answer ad-hoc questions. Designed the RAG architecture end-to-end — document ingestion, chunking, vector indexing, reranking, and LLM generation — supporting structured report output and free-form Q&A over the same corpus. Architected solo on FastAPI and a serverless AWS stack.",
       tags: [
         "Python",
         "FastAPI",
