@@ -63,7 +63,7 @@ export const dataScientistProfile: ProfileData = {
       location: "Mumbai, India",
       bullets: [
         "Built an enterprise RAG platform (LlamaIndex, GPT-4o/Claude, Qdrant, Redis) enabling investment analysts to query and synthesize proprietary research documents, with metadata-based access control and reranking to improve retrieval precision.",
-        "Instrumented 200+ GA4 and Google Tag Manager events across investor journeys, applying behavioral analytics to expose funnel drop-off patterns and inform product decisions directly from data.",
+        "Instrumented 200+ GA4 and Google Tag Manaby ger events across investor journeys, applying behavioral analytics to expose funnel drop-off patterns and inform product decisions directly from data.",
         "Designed and deployed LLM-powered document intelligence pipelines over large unstructured financial corpora, cutting analyst research turnaround from days to minutes.",
         "Collaborated with Product and Business stakeholders to translate analytical requirements into production implementations, operating end-to-end from data instrumentation to model serving.",
       ],
@@ -146,7 +146,7 @@ export const softwareEngineerProfile: ProfileData = {
       location: "Mumbai, India",
       bullets: [
         "Engineered production Java/Spring Boot APIs powering investor-facing wealth management features across SIP, Lump Sum and Goal Planning workflows on a regulated fintech platform at scale.",
-        "Improved Lighthouse scores from 20–30 to 70–80 by applying SSR, Critical CSS, Akamai CDN caching and lazy loading — diagnosing and resolving production performance bottlenecks across B2B and B2C investment platforms.",
+        "Improved Lighthouse scores from 20–30 to 70–80 by diagnosing and resolving production performance bottlenecks across B2B and B2C investment platforms — applying SSR, Critical CSS, Akamai CDN caching, and lazy loading.",
         "Built an enterprise RAG platform (LlamaIndex, GPT-4o/Claude, Qdrant, Redis) enabling investment analysts to securely query proprietary research documents, with metadata-based access control preventing document leakage.",
         "Collaborated directly with Product, QA, and Business teams across sprint planning and production release cycles to deliver financial features in an Agile environment.",
       ],
@@ -166,7 +166,7 @@ export const softwareEngineerProfile: ProfileData = {
     {
       title: "Investment Research Report Generator",
       description:
-        "Cut analyst report-generation time from 2–3 days to under 30 minutes by building an end-to-end LLM pipeline (Amazon Bedrock, LlamaIndex, Qdrant) that ingests annual reports, concall transcripts and financial data to auto-generate research reports and answer ad-hoc questions. Architected the full system solo on FastAPI and a serverless AWS stack (Lambda, API Gateway, S3, DynamoDB), applying Redis caching and metadata-based access control to ensure performant and secure document retrieval.",
+        "Cut analyst report-generation time from 2–3 days to under 30 minutes by building an end-to-end LLM pipeline (Amazon Bedrock, LlamaIndex, Qdrant) that ingests annual reports, earnings call transcripts, and financial data to auto-generate research reports and answer ad-hoc questions. Architected the full system solo on FastAPI and a serverless AWS stack (Lambda, API Gateway, S3, DynamoDB), applying Redis caching and metadata-based access control to ensure performant and secure document retrieval.",
       tags: ["Next.js", "FastAPI", "Python", "AWS Bedrock", "S3", "Lambda", "API Gateway", "DynamoDB", "LlamaIndex", "Qdrant", "Redis"],
       period: "Jul 2025 – Dec 2025",
       featured: true,
@@ -208,6 +208,5 @@ export const softwareEngineerProfile: ProfileData = {
 };
 
 // ─── Legacy named exports (used by existing components on the / route) ─────────
-// These re-export from the DS profile so the main page keeps working
-// without touching every component import.
-export const { experiences, projects, skillGroups } = dataScientistProfile;
+// Re-export from the SDE profile since / defaults to softwareEngineerProfile.
+export const { experiences, projects, skillGroups } = softwareEngineerProfile;
